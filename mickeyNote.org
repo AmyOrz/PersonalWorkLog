@@ -18,6 +18,8 @@
 **** 1.使用alt + 方向键（<-,->）切换标题等级
 **** 2.ctrl + enter 可以快速生成同级标题
 **** 3.shift + 方向键（<-,->）可以快速切换todo
+**** 4.ctrl c + n 跳到下一个主标题, ctrl c + p 调到上一个主标题
+
 
 
 * webkit technology
