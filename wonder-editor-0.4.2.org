@@ -5,15 +5,13 @@
 *** TODO 3.finish css
    
     
-** TODO get sceneGraph from engine   
-*** TODO 1.add contract to check the sceneGraph in editor == engine
+** DONE get sceneGraph from engine   
+*** DONE 1.add contract to check the sceneGraph in editor == engine
 
 ** DONE show sceneGraph to tree     
 ** DONE set parent and set child
 ** TODO finish scene tree test
-
-
-   
+*** DONE 重构，移除所有的变量
 
 
 * TODO set currentGameObject and getCurrentGameObject

@@ -1,9 +1,13 @@
-* git 
-** bumped release publish 
+* git
+** bumped release publish
 *** bumped release <major|minor|pacth>
 
 
+* emacs technology
+**  切换输入法
+*** 1.ctrl+x
+*** 2.回车
+*** 3.ctrl+\
+
 * webkit technology
 ** webkit render process
-   
-let component
