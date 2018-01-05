@@ -11,9 +11,9 @@
  
 
 ** spacemacs 操作git
-*** git add -i  ==> SPC g s,然后使用s去选择需要提交的文件
+*** git add -i  ==> SPC g s,然后使用s去选择需要提交的文件,也可以 SPC g S添加当前文件
 *** git commit  ==> 在git选择界面按 c c, 输入完成后ctrl c + ctrl c完成commit，ctrl c + ctrl k取消commit
-*** git push    ==> 在git选择界面按 p, 就能完成提交
+*** git push    ==> 在git选择界面按 p, 然后选择提交分支, u 为master, 就能完成提交
 
 * webkit technology
 ** webkit render process
