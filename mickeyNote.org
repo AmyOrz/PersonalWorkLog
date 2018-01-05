@@ -5,7 +5,7 @@
 **** 1.git reset --soft + commit：git将重置HEAD到指定commit,但git将停止在这里什么也不会做发生变化
 **** 1.git reset --hard + commit：git将重置HEAD到指定commit,并把所有文件回退到指定commit处，具有破坏性，使用请谨慎
 
-
+     
 * emacs technology
 ***  切换输入法
 **** 1.ctrl+x

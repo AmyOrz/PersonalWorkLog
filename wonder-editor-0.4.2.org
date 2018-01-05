@@ -12,5 +12,6 @@
 ** DONE set parent and set child
 ** DONE finish scene tree test
 *** DONE 重构，移除所有的变量
+*** TODO can't use new Function instead of eval
 
 
