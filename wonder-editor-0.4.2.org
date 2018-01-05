@@ -10,9 +10,7 @@
 
 ** DONE show sceneGraph to tree     
 ** DONE set parent and set child
-** TODO finish scene tree test
+** DONE finish scene tree test
 *** DONE 重构，移除所有的变量
 
 
-* TODO set currentGameObject and getCurrentGameObject
-** TODO get currentGameObject components

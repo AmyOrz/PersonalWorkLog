@@ -1,0 +1,3 @@
+* TODO set currentGameObject and getCurrentGameObject
+** TODO get currentGameObject components
+** TODO show gameObject's component by current gameObject
