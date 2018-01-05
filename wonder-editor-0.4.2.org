@@ -1,6 +1,20 @@
 * TODO scene tree
-** TODO add tree ui component
-** TODO get sceneGraph from engine
-** TODO show sceneGraph to tree
-** TODO set parent and set child
+** TODO add tree ui component 
+*** DONE 1.we can get targetId from drop event, and get dragedId from DataTransfer object   5
+*** DONE 2.finish targetId and dragedId associate in the scene graph data   6
+*** TODO 3.finish css
+   
+    
+** TODO get sceneGraph from engine   
+*** TODO 1.add contract to check the sceneGraph in editor == engine
 
+** DONE show sceneGraph to tree     
+** DONE set parent and set child
+** TODO finish scene tree test
+
+
+   
+
+
+* TODO set currentGameObject and getCurrentGameObject
+** TODO get currentGameObject components

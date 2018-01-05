@@ -1,0 +1,9 @@
+* git 
+** bumped release publish 
+*** bumped release <major|minor|pacth>
+
+
+* webkit technology
+** webkit render process
+   
+let component
