@@ -1,19 +1,29 @@
 * git
-** bumped release publish
-*** bumped release <major|minor|pacth>
+*** bumped release publish
+**** bumped release <major|minor|pacth>
 
 
 * emacs technology
-**  切换输入法
-*** 1.ctrl+x
-*** 2.回车
-*** 3.ctrl+\
- 
+***  切换输入法
+**** 1.ctrl+x
+**** 2.回车
+**** 3.ctrl+\
 
-** spacemacs 操作git
-*** git add -i  ==> SPC g s,然后使用s去选择需要提交的文件,也可以 SPC g S添加当前文件
-*** git commit  ==> 在git选择界面按 c c, 输入完成后ctrl c + ctrl c完成commit，ctrl c + ctrl k取消commit
-*** git push    ==> 在git选择界面按 p, 然后选择提交分支, u 为master, 就能完成提交
+*** spacemacs 操作git
+**** git add -i  ==> SPC g s,然后使用s去选择需要提交的文件,也可以 SPC g S添加当前文件
+**** git commit  ==> 在git选择界面按 c c, 输入完成后ctrl c + ctrl c完成commit，ctrl c + ctrl k取消commit
+**** git push    ==> 在git选择界面按 p, 然后选择提交分支, u 为master, 就能完成提交
+
+*** emacs操作快捷键      
+**** 1.使用alt + 方向键（<-,->）切换标题等级
+**** 2.ctrl + enter 可以快速生成同级标题
+**** 3.shift + 方向键（<-,->）可以快速切换todo
+
 
 * webkit technology
-** webkit render process
+*** webkit render process
+
+
+* 函数式编程规范
+**** 1.一般在函数中不使用变量，直接使用函数替代变量，这样不必维护一个状态。
+**** 2.当函数中有多个地方同时使用一个函数时，可考虑提取为变量，目的在于缓存变量，提高性能
