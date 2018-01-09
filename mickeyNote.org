@@ -1,3 +1,4 @@
+***  你崇拜別人的時候，你就是不相信自己的，(因為)你覺得別人比你優秀。你不相信自己的時候，其實你內心是受傷的。你內心受傷的時候，你就會變得有攻擊性 。
 * git
 *** bumped release publish
 **** bumped release <major|minor|pacth>
@@ -21,15 +22,12 @@
 **** 1.使用alt + 方向键（<-,->）切换标题等级
 **** 3.shift + 方向键（<-,->）可以快速切换todo
 **** 4.ctrl c + n 跳到下一个主标题, ctrl c + p 调到上一个主标题
+
 *** 如何在spacesmacs中添加模块
 **** 1.首先需要在~/.emacs.d/site-lisp/中添加模块文件夹,然后把模块文件.el放到文件夹中
 **** 2.在dotspacemacs/user-config中添加(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-save")
 
-     
-* webkit technology
-*** webkit render process
     
-
 * 函数式编程规范
 **** 1.一般在函数中不使用变量，直接使用函数替代变量，这样不必维护一个状态。
 **** 2.当函数中有多个地方同时使用一个函数时，可考虑提取为变量，目的在于缓存变量，提高性能(package-initialize)
