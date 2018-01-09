@@ -38,4 +38,38 @@
 **** 建立一个资源的缓存池,当webkit需要请求资源的时候,先从资源池中查找是否存在相应的资源.
 **** 如果有则取出使用,没有的话webkit创建一个新的cachedResource子类对象,并发送真正的请求给服务器,webkit收到资源后将其设置到资源类对象中
 **** Webkit从资源池中查找资源的关键字是URL,因为标记资源唯一性的特征就是资源的URL,如果2个资源有不同的URL,但他们内容相同,也被认为是2个不同资源
+     
+**  DOM树
+*** 构建流程
+**** 我们经过网络拿到html文件的字节流(bytes) ---> 字符流(Characters)  ---> 词法解析---> 节点 ----> DOM树
 
+*** Js执行
+**** 在html解析器工作中,可能会遇到Js代码(全局作用域)需要执行,他发生在将字符串解析成词语之后,创建各种节点的时候,这时Js不能访问DOM树,因为DOM树还没构建完成.
+
+*** 事件的工作过程
+**** 事件捕获:事件从document节点开始自顶向下开始查找,找到之后可以使用stopPropagation函数阻止事件向下传递
+**** 事件冒泡:事件从目标开始自底向上开始冒泡,逐级触发事件,可以使用stopPropagation函数阻止事件向上冒泡
+**** 可以使用preventDefault来阻止默认事件
+
+** Css解析器:在Dom树构建后,RenderObject树构建之前
+*** 解析过程:Css字符串经过css解释器处理编程渲染引擎的内部规则表达式.
+**** 根据Css选择器匹配到对应的dom节点,然后存储该节点Css样式结果去构建RenderObject树
+
+** webkit渲染:RenderObject树和其他树(如RenderLayer)构成webkit渲染的主要基础设施
+*** RenderObject树:以下规则会为DOM树节点创建一个RenderObject对象
+**** 1.DOM树的document节点
+**** 2.DOM树中可视节点(html,body,div等),而不会为不可视节点(meta) 创建
+**** 3.某些情况webkit 需要创建匿名RenderObject节点,该节点不对应于DOM树中的任何节点
+**** 这些RenderObject节点会构成一棵RenderObject树
+
+
+*** RenderLayer树:webKit为网页的层次创建相应的RenderLayer树
+**** 某些类型的RenderObject节点或具有Css样式的RenderObject节点出现的时候Webkit就会为这些节点创建RenderLayer对象,一般来说,某个RenderObject节点的后代都属于该节点
+**** 1.DOM树的Document节点对应的RenderView节点
+**** 2.DOM树中Document的子女节点,就是HTML节点对应的RenderBlock节点
+**** 3.显式的指定Css位置的RenderObject节点
+**** 4.有透明效果的RenderObject节点
+**** 5.节点有溢出(overflow),alpha,反射效果的RenderObject节点
+**** 6.使用canvas2D / 3D 技术的RenderObject节点
+**** 7.Video节点对应的RenderObject节点
+**** 这些RenderLayer节点会构成一棵RenderLayer树
