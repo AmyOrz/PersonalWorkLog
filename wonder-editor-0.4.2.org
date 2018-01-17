@@ -12,6 +12,15 @@
 ** DONE set parent and set child
 ** DONE finish scene tree test
 *** DONE 重构，移除所有的变量
-*** TODO can't use new Function instead of eval
+*** DONE can't use new Function instead of eval
+*** DONE /* TODO not init again. already TestToolUI.initMainEditor(sandbox) *
+*** DONE add uniform3f method in buildFakeGL
+
+**  fix bug
+*** DONE 拖动treeNode 到canvas中，会造成treeNode丢失，应该设置css
+*** DONE mainView -> loop bug
+*** DONE add unsafeGetCurrentGameObject instead of some getCurrentGameObject
+*** DONE move camera to gameobject1, throw error
+
 
 

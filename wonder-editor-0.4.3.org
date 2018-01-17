@@ -1,4 +1,9 @@
 * TODO set currentGameObject and getCurrentGameObject
 *** DONE get currentGameObject components
 *** DONE set currentGameObject components
-*** TODO show gameObject's component by current gameObject
+*** TODO show gameObject's component by current gameObject  /* TODO dragId shouldn't be store in event
+     make sure that the logic of operate dragId should only in TreeNode, not in DragTree
+     store dragId in state/store? */   MainEditorSceneTreeView.getDragedSceneGraphData(
+                  targetUid,
+                  dragedUid,
+                  getSceneGraphDataFromStore(store)
