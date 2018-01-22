@@ -24,3 +24,7 @@
 
 
 
+* DONE set currentGameObject and getCurrentGameObject
+*** DONE get currentGameObject components
+*** DONE set currentGameObject components
+*** DONE show gameObject's component by current gameObject  /* TODO dragId shouldn't be store in event
