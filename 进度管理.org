@@ -1,0 +1,45 @@
+* TODO 2.26-4.10号需求整理
+*** TODO add GameObject(0.5d)
+*** TODO add component(0.5d)
+*** TODO 运行与停止 (9天)
+**** 动态渲染场景, 运行中改变的值不保存, 停止既恢复到运行前的状态
+*** TODO 资源管理 (9天)
+**** 上传图片,js文件(获取base64缓存到indexDb)
+**** 将资源添加到GameObject
+*** TODO 导入和导出.wd文件 (9天)
+**** 将项目导出为文件,使用jszip,压缩为一个包
+**** 将项目导入进来,可以读取文件资源,渲染场景
+*** js脚本 (3天)
+*** picking, 相机设置 (3天)
+*** transform
+**** rotation
+**** scale
+
+* 4.11-5.01
+*** finish demos(important!!!)
+
+*** data collection
+**** give pv/dv, ... statistic
+*** 用户流程
+**** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将信息保存到我们服务器,信息保存为indexDb,存在丢失风险
+**** 读取/保存 项目
+***** 没有登录
+****** 访问本地indexDb看是否存在项目,存在则读取出来进行选择
+****** 保存为本地
+***** 登录
+****** 从服务器读取项目,进行选择
+**** 读取配置文件:我们将从用户本地缓存中读取配置文件
+***** 从服务器拉取默认配置,可以进行修改,保存到本地缓存,点击运行场景时读取配置进行渲染
+***** 所以我们都将从用户本地缓存中读取配置文件
+*** ui
+* after 1.0.0
+*** 材质贴图设置 (3天)
+**** 从资源内获取纹理设置到GameObject
+
+*** pwa 设置 (3天)
+**** offline visit, cache
+**** app shell
+**** service worker
+
+*** mobile
+**** can simulate mobile in editor
