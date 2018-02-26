@@ -15,6 +15,50 @@
 * DONE add gameObject
   
 * TODO add component
-** TODO 完成component 外部ui，可删除组件和不可删除组件
-** TODO 完成添加component ui，从json中获取可添加的组件信息
-** 
+** DONE 完成component 外部ui，可删除组件和不可删除组件
+** DONE 完成添加component ui，从json中获取可添加的组件信息
+** DONE 设计如何添加component
+*** 1.用户的配置信息应该固话为每个项目的信息，比如用户添加了一个instance组件给GameObject1，应该保存在该项目配置内，下次访问该配置显示GameObject1的组件
+*** 2.这里可以提出一个GameObject全部组件配置文件，和用户显示哪些组件配置文件，而且需要读取用户配置文件来更改可添加组件的配置文件
+*** 3.提出3个文件
+**** 1.GameObject全部组件的配置文件
+**** 2.GameObject显示在inspector上的配置文件，这里没有显示在inspector上的就在可添加组件中
+**** 3.用户修改了GameObject显示在inspector上的配置文件，进而也修改了显示在可添加组件中的信息
+**** 总结：首先我们读取用户的配置文件，不存在则读取默认GameObject显示的配置文件，当用户操作GameObject后，修改用户的配置文件
+**** 这里就涉及到用户配置文件如何设计，as we all know, 存储在indexDb中，这里还涉及到用户项目存储于indexDB的过程
+*** 经过讨论，提出GameObject全部组件配置文件，然后进行判断当前GameObject是否存在其中component，存在则显示在inspector，不存在则显示在可添加组件中
+** TODO 完成测试
+*** TODO 添加组件的测试
+*** TODO sourceInstance的测试
+*** TODO scenetree should update
+*** TODO header ui component redo/undo click
+** TODO 把设置material color加入redo/undo
+    
+* 用户流程
+** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将信息保存到我们服务器,信息保存为indexDb,存在丢失风险
+** 读取/保存 项目
+*** 没有登录
+**** 访问本地indexDb看是否存在项目,存在则读取出来进行选择
+**** 保存为本地
+*** 登录
+**** 从服务器读取项目,进行选择
+** 读取配置文件:我们将从用户本地缓存中读取配置文件
+*** 从服务器拉取默认配置,可以进行修改,保存到本地缓存,点击运行场景时读取配置进行渲染
+*** 所以我们都将从用户本地缓存中读取配置文件
+* 添加camera
+* 删除component
+* 个人计划表
+*** 每天早上6点起床,站桩半小时
+*** 7点开始读英语/记单词
+*** 8点开始写代码
+*** 星期1,3,5,7下午4点准备去健身
+*** 星期4和星期5晚上休息,可以玩游戏 
+* 2.26-4.10号需求整理
+*** 资源管理
+*** 材质贴图设置
+*** 运行与停止
+*** 导入和导出.wd文件
+*** js脚本
+*** picking, 相机设置
+*** pwa 设置
+  
