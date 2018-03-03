@@ -13,6 +13,10 @@
 *** DONE 测试shouldUpdate
     
 * DONE add gameObject
+*** TODO finish engine test
+  
+* TODO bug
+*** TODO dispose keep order
   
 * TODO add component
 ** DONE 完成component 外部ui，可删除组件和不可删除组件
@@ -27,13 +31,14 @@
 **** 总结：首先我们读取用户的配置文件，不存在则读取默认GameObject显示的配置文件，当用户操作GameObject后，修改用户的配置文件
 **** 这里就涉及到用户配置文件如何设计，as we all know, 存储在indexDb中，这里还涉及到用户项目存储于indexDB的过程
 *** 经过讨论，提出GameObject全部组件配置文件，然后进行判断当前GameObject是否存在其中component，存在则显示在inspector，不存在则显示在可添加组件中
-** TODO 完成测试
-*** TODO 添加组件的测试
-*** TODO sourceInstance的测试
-*** TODO scenetree should update
-*** TODO header ui component redo/undo click
+** DONE 完成测试
+*** DONE 添加组件的测试
+*** DONE sourceInstance的测试
+*** DONE scenetree should update
+*** DONE header ui component redo/undo click
 ** TODO 把设置material color加入redo/undo
-    
+*** TODO finish test
+** DONE finish engine test
 * 用户流程
 ** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将信息保存到我们服务器,信息保存为indexDb,存在丢失风险
 ** 读取/保存 项目
@@ -45,12 +50,5 @@
 ** 读取配置文件:我们将从用户本地缓存中读取配置文件
 *** 从服务器拉取默认配置,可以进行修改,保存到本地缓存,点击运行场景时读取配置进行渲染
 *** 所以我们都将从用户本地缓存中读取配置文件
-* 添加camera
+* TODO 添加camera
 * 删除component
-* 个人计划表
-*** 每天早上6点起床,站桩半小时
-*** 7点开始读英语/记单词
-*** 8点开始写代码
-*** 星期1,3,5,7下午4点准备去健身
-*** 星期4和星期5晚上休息,可以玩游戏, 其余时间晚上正常编程   
-*** 除了星期4/5晚上可以玩游戏之外,其余时间尽量不碰游戏和其余社交活动  
