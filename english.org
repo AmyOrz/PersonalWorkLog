@@ -1,0 +1,43 @@
+* be动词:否定句就是在be动词后面加not, 如果变一般疑问句,就把be动词提到句子前
+*** I am
+*** she/he/it is
+*** you/we/they are
+    
+* 副词:修饰动词,形容词,副词或其他结构
+** 位置
+*** 在动词之前
+*** 在be动词,助词之后
+*** 多个助词时,副词一般放在第一个助词之后
+** 时间副词
+*** 表示确定时间的副词,通常位于句末,有时也位于句首
+*** ago, ahead, before, behind, beside, below, soon, now, recently, sometime, today, tomorrow tonight then
+** 地点副词
+*** 一般位于句首或者句末,但从不位于主语和谓语之间
+*** above abroad down downstairs everywhere here home inside out there
+** 疑问副词
+*** 用于引导特殊疑问句,通常在句首,
+*** how when where why
+** 方式副词
+*** badly slowly carefully easily
+** 程度副词
+*** 修饰形容词和副词
+*** almost deeply enough greatly
+** 关系副词
+*** 引导定于从句,且在句子中用作状语,
+*** when where why
+** 连接副词
+*** 连接句子或从句
+*** if how however nor
+** 句子副词
+*** generally maybe
+    
+* 倒装句
+*** My ticket is here --> Here is my ticket
+    
+* 人称代词
+*** 主格:            ( I    he  she  it  you) 放在句首做主语
+*** 宾格:            ( me   him her  it  you) 放在动词或介词后面
+*** 形容词性物主代词: ( my   his her  its your) 不能单独使用, 用于代替形容词修饰的名词的物体主人
+**** eg: this is my pen.(pen 是名词,可以用形容词修饰, 这里使用my作为pen的主人)
+*** 名词性物主代词:   ( mine his hers its yours)只能单独使用
+**** eg: this pen is mine

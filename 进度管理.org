@@ -3,7 +3,7 @@
 **** TODO dispose gameObject keep order
 *** TODO add component(0.5d)
 *** TODO 运行与停止 (9天)
-**** we need two canvas,
+**** we need two canvas
 **** 停止阶段不启动循环,每次根据事件触发重新渲染一次.然后保存
 **** 运行时启动循环,读取js脚本,此时动态改变各属性,不保存该状态,停止既恢复到运行前的状态,
 
