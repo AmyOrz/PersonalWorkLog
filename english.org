@@ -41,3 +41,29 @@
 **** eg: this is my pen.(pen 是名词,可以用形容词修饰, 这里使用my作为pen的主人)
 *** 名词性物主代词:   ( mine his hers its yours)只能单独使用
 **** eg: this pen is mine
+* 冠词
+*** 定冠词 the
+**** 以元音发音开发的单词前读[ði]
+***** there is an apple on the desk. the apple is mine.
+**** 在特指名词时使用
+**** 专有名词时:表示特指
+***** the Great Wall, the Sun 
+**** 在国家前面不用冠词,出个别除外
+***** the United States of America
+*** 不定冠词 a,an
+**** 以元音发音开头的单词前面加an
+***** hour --> an hour  university --> a university
+**** 数量上表示一个
+**** 可数名词单数前面必须加不定冠词
+* 特殊疑问句 : 特殊疑问词 + 一般疑问句
+*** 特殊疑问词
+**** what where why which who when how (how many, how much, how long, how far, how often, how soon)
+*** 一般疑问句:
+**** be动词 + ...
+**** do/does/did + ...
+**** have/has/had + ...
+**** can/情态动词(must, need, may) + ...
+**** 所有一般疑问句,用什么来问就用什么回答
+      
+    
+   
