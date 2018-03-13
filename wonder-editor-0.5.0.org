@@ -63,11 +63,28 @@
 **** transform module
 *** DONE 不是很清楚commonService的真正用处, 现在看来是封装了所有的adaptor代码
 **** 多处使用的更小数据操作函数  save commonservice
+**** 比如 editorState 中操作scene放在一个commonService, 操作currentGameObject放在一个commonService
 *** DONE getCurrentGameObjectLocalPosition 应该放在composite里面, 对应模块叫什么名字
 **** 删除currentGameObject这种指定的东西
 *** DONE addBox 也是在composite里面,对应模块叫什么
 **** primitiveCOmpositeService
 *** DONE 只要模块命表示出操作的数据,不需要在func名词中再次涉及
-*** TODO adaptor 放在logic service, logic 抽出 composite and single 2个文件夹
-**** logicCompositeservice
-*** TODO 把所有logic service 和 composite service组合到 facade里面
+
+*** DONE GameObjectEngineService and transformEngineService has common function
+**** GameObjectUtils中 addChild, 使用了GameObjectEngineService 和 transformEngineService, 所以提到utils中
+
+*** DONE record 层没有func, 都在primitive中
+**** 应该是在record中, 而record中相同的代码提到primitive中
+
+*** DONE inspector组件中显示组件的func应该提到GameObjectEngineService?
+**** 提到gameObjectUtils中,ui层相关逻辑都在utils中
+    
+*** TODO treeNode data放在哪里?
+**** treeNode属于sceneGraph, 应该在ui层
+** stateTuple层命名
+*** logic(editor,engine):只操作了editor和engine的stateTuple层
+*** history:操作了historyData的层
+**** editorHistory: 操作了history和editor
+**** engineHistory: 操作了history和engine
+**** uiHistory: 操作了history和appStore
+**** allHistory: 操作了editor engine ui 以及 history

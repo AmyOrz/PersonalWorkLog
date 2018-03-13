@@ -2,35 +2,43 @@
 *** I am
 *** she/he/it is
 *** you/we/they are
-    
-* 副词:修饰动词,形容词,副词或其他结构
+* 表语
+** 定义:表语是紧跟系动词之后的结构
+** 
+* 副词
+** 定义:修饰动词,形容词,副词,介词短语,不定式,句子等
+** adv 对比 adj
+*** a beautiful red flower 其中beautiful和red都是形容flower
+*** a deep red flower deep修饰形容词red,表示深红
+** 用法
+*** disjunct(分离): 与句子分离的副词, 此类副词修饰句子
+**** clearly, we have got the trophy. 很明显,我们拿到了奖杯
+**** Fortunately, that is not the case. 幸运的是, 现实不是那样的
+*** adjunct(附属): 位于句子内部的副词, 此类副词修饰除句子以外的结构(修饰词类, 介词短语, 不定式)
+**** She knows me well (副词well修饰动词 know)
+**** I'm here just to make up the number (just修饰不定式  to make up the number)
+*** conjunct(连接): 连接2个句子的副词, 此类副词没有修饰功能, 作用是连接前后2个句子
+**** I'd like help you, However, my hands are full.(我很愿意帮助你,可是,我腾不出手)
+**** It was raining at 8. Therefore, we didn't go swimming. (8点正好下雨,所以,我们没有去游泳)
 ** 位置
-*** 在动词之前
-*** 在be动词,助词之后
-*** 多个助词时,副词一般放在第一个助词之后
-** 时间副词
-*** 表示确定时间的副词,通常位于句末,有时也位于句首
-*** ago, ahead, before, behind, beside, below, soon, now, recently, sometime, today, tomorrow tonight then
-** 地点副词
-*** 一般位于句首或者句末,但从不位于主语和谓语之间
-*** above abroad down downstairs everywhere here home inside out there
-** 疑问副词
-*** 用于引导特殊疑问句,通常在句首,
-*** how when where why
-** 方式副词
-*** badly slowly carefully easily
-** 程度副词
-*** 修饰形容词和副词
-*** almost deeply enough greatly
-** 关系副词
-*** 引导定于从句,且在句子中用作状语,
-*** when where why
-** 连接副词
-*** 连接句子或从句
-*** if how however nor
-** 句子副词
-*** generally maybe
-    
+*** 副词修饰动词时: 位于动词之前, 紧接着动词:
+**** The guests loudly laughed.(客人们大声的笑着)
+**** 也可以位于动词之后, 不紧接动词:
+***** The guests laughed loudly
+*** 副词修饰形容词: 位于形容词之前, 且2个词必须紧接着:
+**** John had a very beautiful daughter.
+**** 有一个副词很特别,enough, 一般位于形容词之后
+***** This fruit isn't sweet enough.
+*** 副词修饰副词: 两个副词必须紧接, 相对靠前的副词起到修饰作用
+**** You walk too fast!
+*** 副词修饰介词短语,不定式,句子等复杂结构时:副词须位于被修饰结构之前且两者须紧接
+**** 修饰介词短语:
+***** The number is well above the March average.
+**** 修饰不定式:
+***** I'm here just to make up the number
+**** 修饰句子:
+***** Frankly, you have to eat something.
+
 * 倒装句
 *** My ticket is here --> Here is my ticket
     
@@ -64,6 +72,43 @@
 **** have/has/had + ...
 **** can/情态动词(must, need, may) + ...
 **** 所有一般疑问句,用什么来问就用什么回答
-      
-    
+* 时态: 一个动作发生的时间和状态
+*** 时间定义: 过去(past) 现在(now) 将来(future)
+*** 状态定义:
+**** 一般式: 经常发生的动作
+***** I often get up at 7.
+**** 进行式: 正在进行的动作(be动词+doing)
+***** she is singing a Fren song.
+**** 完成式: 之前发生的动作(have+ done)
+***** They have Found the missing child
+**** 完成进行式: 对正在进行动作的总结(have + been + doing)
+***** I have been reading books for two hours(我已经连续读书2小时)
+*** 十二类时态    
+**** 一般现在时: 除了经常发生的动作外,还可以表示客观事实
+***** Light travels more quickly than sound.
+**** 一般过去时: 某个过去时间点发生的动作
+***** I used the pen before.
+**** 一般将来时: 某个将来的时间点发生的动作
+***** I will live in a modern city.
+**** 现在进行时(am/is/are doing): 现在正在进行的动作
+***** I am playing tennis now.
+**** 过去进行时(was/were doing): 过去某个时间端正在进行的动作
+***** They were watching TV when a strange suddenly rushed in.
+**** 将来进行时(will be doing):某个将来的时间点或时间段正在进行的动作,一般是实现计划好一定会发生的
+***** We will be flying at 3000 feet in five minutes.(5分钟后,我们就会翱翔在3000英尺的额高空)
+**** 现在完成时(have/has done): 处于现在这个时间点,对之前的动作的总结
+***** I have used the pen only three times
+**** 过去完成时(had done): 站在过去某个时间, 对这个时间点之前的动作的总结
+***** When they reached there, the ship had set off.(当他们到达那里的时候, 船已经开了)
+**** 将来完成时(will have done): 站在将来某个时间点, 对这个时间点之前的动作的总结
+***** By July, Jack will have got two college degrees.
+**** 现在完成进行时(have/has been doing) :对一个现在正在进行的动作的总结
+***** Tom has been playing football for two hours.
+**** 过去完成进行时(had been doing): 站在某个过去的时间点, 对这个时间正在进行的动作的总结
+***** I had been cleaning my room the whole morning when she came.
+**** 将来完成进行时(will have been doing): 站在某个将来的时间点, 对这个时间点正在进行的动作的总结
+***** I will have bben doing the drawing for five hour at 11pm.
+***** 到晚上11点,我就连续画图5小时了
+
+
    
