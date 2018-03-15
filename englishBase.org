@@ -1,0 +1,98 @@
+* 副词
+** 定义:修饰动词,形容词,副词,介词短语,不定式,句子等
+** adv 对比 adj
+*** a beautiful red flower 其中beautiful和red都是形容flower
+*** a deep red flower deep修饰形容词red,表示深红
+** 用法
+*** disjunct(分离): 与句子分离的副词, 此类副词修饰句子
+**** clearly, we have got the trophy. 很明显,我们拿到了奖杯
+**** Fortunately, that is not the case. 幸运的是, 现实不是那样的
+*** adjunct(附属): 位于句子内部的副词, 此类副词修饰除句子以外的结构(修饰词类, 介词短语, 不定式)
+**** She knows me well (副词well修饰动词 know)
+**** I'm here just to make up the number (just修饰不定式  to make up the number)
+*** conjunct(连接): 连接2个句子的副词, 此类副词没有修饰功能, 作用是连接前后2个句子
+**** I'd like help you, However, my hands are full.(我很愿意帮助你,可是,我腾不出手)
+**** It was raining at 8. Therefore, we didn't go swimming. (8点正好下雨,所以,我们没有去游泳)
+** 位置
+*** 副词修饰动词时: 位于动词之前, 紧接着动词:
+**** The guests loudly laughed.(客人们大声的笑着)
+**** 也可以位于动词之后, 不紧接动词:
+***** The guests laughed loudly
+*** 副词修饰形容词: 位于形容词之前, 且2个词必须紧接着:
+**** John had a very beautiful daughter.
+**** 有一个副词很特别,enough, 一般位于形容词之后
+***** This fruit isn't sweet enough.
+*** 副词修饰副词: 两个副词必须紧接, 相对靠前的副词起到修饰作用
+**** You walk too fast!
+*** 副词修饰介词短语,不定式,句子等复杂结构时:副词须位于被修饰结构之前且两者须紧接
+**** 修饰介词短语:
+***** The number is well above the March average.
+**** 修饰不定式:
+***** I'm here just to make up the number
+**** 修饰句子:
+***** Frankly, you have to eat something.
+* 冠词
+*** 定冠词 the
+**** 以元音发音开发的单词前读[ði]
+***** there is an apple on the desk. the apple is mine.
+**** 在特指名词时使用
+**** 专有名词时:表示特指
+***** the Great Wall, the Sun 
+**** 在国家前面不用冠词,出个别除外
+***** the United States of America
+*** 不定冠词 a,an
+**** 以元音发音开头的单词前面加an
+***** hour --> an hour  university --> a university
+**** 数量上表示一个
+**** 可数名词单数前面必须加不定冠词
+* 代词:代替名词的一种词类,大多数具有名词和形容词的功能
+** 人称代词
+*** 主格:            ( I    he  she  it  you) 放在句首做主语
+*** 宾格:            ( me   him her  it  you) 放在动词或介词后面
+*** 形容词性物主代词: ( my   his her  its your) 不能单独使用, 用于代替形容词修饰的名词的物体主人
+**** eg: this is my pen.(pen 是名词,可以用形容词修饰, 这里使用my作为pen的主人)
+*** 名词性物主代词:   ( mine his hers its yours)只能单独使用
+**** eg: this pen is mine
+** 指示代词:表示这个,那个,这些,那些等指示概念的代词
+*** this(复数these) 指在时间上或空间上离说话人较近的人或物
+*** that(复数those) 指在时间上或空间上离说话人较远的人或物
+** 反身代词:表示我自己,你自己,他自己等意义的代词
+*** 第一人称 单数   复数
+****        myself  ourselves
+*** 第二人称 单数         复数
+****       yourself      yourselves
+*** 第三人称 单数               复数
+**** ( himself herself itself )   themselves
+* 名词:表示人,事物,抽象概念的名称的词
+** 个体名词: 表示某类人或东西中的个体(gun)
+** 集体名词:表示若干个个体组成的集合体(family)
+** 物质名词:表示无法分为个体的实物(air)
+** 抽象名词:表示动作,状态,品质,感情等抽象概念(work)
+* 介词
+** 定义 (prep)
+*** 
+* 动词
+** 定义:表示人或事物的动作
+** be动词
+*** 否定句就是在be动词后面加not, 如果变一般疑问句,就把be动词提到句子前
+**** I am
+**** she/he/it is
+**** you/we/they are
+** 动词不定式(to v.):表达未来目标的意思, 所以只要跟未来打算要做的事有关,就用它
+*** we are planning to visit London this summer.
+** 动名词(V-ing): 把动词变成名词,功能和名词一样.动名词表达一种持续的状态,事实,习惯
+*** I enjoyed reading these books very much.
+** 及物动词(vt.)和不及物动词(vi.)
+*** 如果动词被翻译为"我...他"或者"他被我..." 就是及物动词,否则就是不及物动词
+*** 所以有及物动词 kill do make notice enjoy love
+*** 不及物动词 dance happen run sing study live
+*** 还有兼做及物和不及物动词的情况
+**** string vt.唱 / vi. 唱歌
+**** study vt. 研究/ vi. 读书
+**** kill  vt. 杀 / vi.杀戮
+** 系动词: 联系其前后两个结构
+*** am/is/are keep seem appear become feel get grow remain smell look sound stay taste
+*** 系动词后可以跟名词和形容词
+*** 将系动词替换为be动词后,句子的语义基本不变
+**** she looked a little tired.
+**** she was a little tired.

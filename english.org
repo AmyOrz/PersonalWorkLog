@@ -1,74 +1,16 @@
-* be动词:否定句就是在be动词后面加not, 如果变一般疑问句,就把be动词提到句子前
-*** I am
-*** she/he/it is
-*** you/we/they are
-* 表语
-** 定义:表语是紧跟系动词之后的结构
-** 
-* 副词
-** 定义:修饰动词,形容词,副词,介词短语,不定式,句子等
-** adv 对比 adj
-*** a beautiful red flower 其中beautiful和red都是形容flower
-*** a deep red flower deep修饰形容词red,表示深红
-** 用法
-*** disjunct(分离): 与句子分离的副词, 此类副词修饰句子
-**** clearly, we have got the trophy. 很明显,我们拿到了奖杯
-**** Fortunately, that is not the case. 幸运的是, 现实不是那样的
-*** adjunct(附属): 位于句子内部的副词, 此类副词修饰除句子以外的结构(修饰词类, 介词短语, 不定式)
-**** She knows me well (副词well修饰动词 know)
-**** I'm here just to make up the number (just修饰不定式  to make up the number)
-*** conjunct(连接): 连接2个句子的副词, 此类副词没有修饰功能, 作用是连接前后2个句子
-**** I'd like help you, However, my hands are full.(我很愿意帮助你,可是,我腾不出手)
-**** It was raining at 8. Therefore, we didn't go swimming. (8点正好下雨,所以,我们没有去游泳)
-** 位置
-*** 副词修饰动词时: 位于动词之前, 紧接着动词:
-**** The guests loudly laughed.(客人们大声的笑着)
-**** 也可以位于动词之后, 不紧接动词:
-***** The guests laughed loudly
-*** 副词修饰形容词: 位于形容词之前, 且2个词必须紧接着:
-**** John had a very beautiful daughter.
-**** 有一个副词很特别,enough, 一般位于形容词之后
-***** This fruit isn't sweet enough.
-*** 副词修饰副词: 两个副词必须紧接, 相对靠前的副词起到修饰作用
-**** You walk too fast!
-*** 副词修饰介词短语,不定式,句子等复杂结构时:副词须位于被修饰结构之前且两者须紧接
-**** 修饰介词短语:
-***** The number is well above the March average.
-**** 修饰不定式:
-***** I'm here just to make up the number
-**** 修饰句子:
-***** Frankly, you have to eat something.
-
 * 倒装句
 *** My ticket is here --> Here is my ticket
     
-* 人称代词
-*** 主格:            ( I    he  she  it  you) 放在句首做主语
-*** 宾格:            ( me   him her  it  you) 放在动词或介词后面
-*** 形容词性物主代词: ( my   his her  its your) 不能单独使用, 用于代替形容词修饰的名词的物体主人
-**** eg: this is my pen.(pen 是名词,可以用形容词修饰, 这里使用my作为pen的主人)
-*** 名词性物主代词:   ( mine his hers its yours)只能单独使用
-**** eg: this pen is mine
-* 冠词
-*** 定冠词 the
-**** 以元音发音开发的单词前读[ði]
-***** there is an apple on the desk. the apple is mine.
-**** 在特指名词时使用
-**** 专有名词时:表示特指
-***** the Great Wall, the Sun 
-**** 在国家前面不用冠词,出个别除外
-***** the United States of America
-*** 不定冠词 a,an
-**** 以元音发音开头的单词前面加an
-***** hour --> an hour  university --> a university
-**** 数量上表示一个
-**** 可数名词单数前面必须加不定冠词
 * 特殊疑问句 : 特殊疑问词 + 一般疑问句
 *** 特殊疑问词
 **** what where why which who when how (how many, how much, how long, how far, how often, how soon)
 *** 一般疑问句:
 **** be动词 + ...
-**** do/does/did + ...
+***** 有be动词直接把be提前
+***** you are studying english.   --> are you studying english?
+**** do/does/did + ..
+***** 没有be动词的句子变一般疑问句,需要使用助动词,
+***** you study english.  --> do you study english?
 **** have/has/had + ...
 **** can/情态动词(must, need, may) + ...
 **** 所有一般疑问句,用什么来问就用什么回答
@@ -85,13 +27,14 @@
 ***** I have been reading books for two hours(我已经连续读书2小时)
 *** 十二类时态    
 **** 一般现在时: 除了经常发生的动作外,还可以表示客观事实
+***** I study english.
 ***** Light travels more quickly than sound.
 **** 一般过去时: 某个过去时间点发生的动作
 ***** I used the pen before.
 **** 一般将来时: 某个将来的时间点发生的动作
 ***** I will live in a modern city.
 **** 现在进行时(am/is/are doing): 现在正在进行的动作
-***** I am playing tennis now.
+***** I am studying english now.
 **** 过去进行时(was/were doing): 过去某个时间端正在进行的动作
 ***** They were watching TV when a strange suddenly rushed in.
 **** 将来进行时(will be doing):某个将来的时间点或时间段正在进行的动作,一般是实现计划好一定会发生的
@@ -109,6 +52,45 @@
 **** 将来完成进行时(will have been doing): 站在某个将来的时间点, 对这个时间点正在进行的动作的总结
 ***** I will have bben doing the drawing for five hour at 11pm.
 ***** 到晚上11点,我就连续画图5小时了
+* 表语
+** 定义:表语是紧跟系动词之后的结构
+** 由于系动词后可以跟名词或形容词,所以表语可以是名词或形容词
+** she is beautiful. 表语就是beautiful
+* 定语
+** 定义:定语是广义的形容词
+** 形容词用来修饰名词或代词
+*** the cute boy speaks English.
+** 但我们需要表达"穿红衣服的男孩" 或者"刚刚和我一起玩的男孩"形容词无法修饰
+** 所以我们需要介词短语或者定语从句作为后置定语
+*** the boy in red speaks English
+*** the boy whom I played with speaks English
+** 我们将可以充当形容词的结构称为定语,此类结构作定语时可被翻译为"...的"
+* 状语
+** 定义:状语是广义的副词
+** 副词修饰除名词和代词外的其他结构
+*** James answered quickly. 
+** 但我们需要表达"James用英语回答",却没有副词能够使用
+** 此时需要使用介词短语充当副词,修饰answered
+*** James answered in English.
+** 表达"当我还没想法的时候,James回答了" 需要使用状语从句充当副词
+*** When I had no idea, James answered.
+** 我们将可以充当副词的结构称为状语
+* 补语
+** 定义:补语是对宾语的补充说明
+** 当下列动词表示其词义时需要使用补语
+*** ask(要求) find(发现) make(使得) have(把) see(看到) hear(听到) watch(看着) want(要求)
+*** They have no habit of smoking(他们没有抽烟的习惯) 此时have为有,不需要补语
+*** I have my hair dyed. 我把我头发染了.此时have为把,需要补语
+** 特点
+*** 补语是句子中不可忽略的成分
+*** 宾语和补语之间加入be动词后能构成完整的句子,且该局阐述的信息和原句信息基本相同
+*** eg:
+**** I found the homework difficult.
+**** 如果去除补语得到,I found the homework, 此时语义变化很大,无法忽略补语
+**** 此时宾语和补语加上be动词为: The homework is difficult.
+**** 句子语义基本没变,所以是补语
+
+
 
 
    

@@ -48,10 +48,9 @@
 **** offline visit, cache
 **** app shell
 **** service worker
-
 *** TODO mobile
 **** can simulate mobile in editor
-
+*** TODO 多人协作,改动同一个场景文件
 * 版本发布流程
 *** finish all TODO
 *** pass all tests
