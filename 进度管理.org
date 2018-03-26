@@ -95,4 +95,4 @@
 *** 然后根据pipeline中定义的job从map中取出相应的job函数
 *** 把这些函数存入到指定engineState中, 在引擎启动时执行pipeline中的job流水线
 *** 其中配置文件pipleline/ 中定义流水线, job/ 中定义相应的配置信息
-*** 一次loopBody就是一次渲染流水线
+*** 一次loopBody就是一次渲染流水线出
