@@ -36,10 +36,10 @@
 **** 以元音发音开发的单词前读[ði]
 ***** there is an apple on the desk. the apple is mine.
 **** 在特指名词时使用
-**** 专有名词时:表示特指
-***** the Great Wall, the Sun 
-**** 在国家前面不用冠词,出个别除外
+***** 专有名词时:表示特指
+****** the Great Wall, the Sun 
 ***** the United States of America
+****** 在国家前面不用冠词,个别除外
 *** 不定冠词 a,an
 **** 以元音发音开头的单词前面加an
 ***** hour --> an hour  university --> a university
@@ -69,8 +69,23 @@
 ** 物质名词:表示无法分为个体的实物(air)
 ** 抽象名词:表示动作,状态,品质,感情等抽象概念(work)
 * 介词
-** 定义 (prep)
-*** 
+** 定义 (prep):介词不能单独使用, 是置于名词前,组成表示时间,状态,目的或原因的介词短语
+** 介词+名词=介词短语
+*** into water, in BeJing, on Monday, off the road
+** 介词短语可以充当形容词和副词使用, 因此可在句子中作定语,状语,表语和补语
+*** 作定语:
+**** a meeting in the morning. 
+**** the road to becoming successful成功的道路
+**** secrets between you and me
+*** 作状语
+**** the girl is thinking about her future.
+**** 介词短语about her future 修饰动词think
+*** 作表语
+**** the waiter is in a good mood.服务员心情不错
+**** 等同于 the waiter is happy
+*** 作补语
+**** tom put some books on the table. tom放了些书在桌上
+
 * 动词
 ** 定义:表示人或事物的动作
 ** be动词
@@ -84,10 +99,10 @@
 *** I enjoyed reading these books very much.
 ** 及物动词(vt.)和不及物动词(vi.)
 *** 如果动词被翻译为"我...他"或者"他被我..." 就是及物动词,否则就是不及物动词
-*** 所以有及物动词 kill do make notice enjoy love
+*** 及物动词 kill do make notice enjoy love
 *** 不及物动词 dance happen run sing study live
 *** 还有兼做及物和不及物动词的情况
-**** string vt.唱 / vi. 唱歌
+**** sring vt.唱 / vi. 唱歌
 **** study vt. 研究/ vi. 读书
 **** kill  vt. 杀 / vi.杀戮
 ** 系动词: 联系其前后两个结构
@@ -96,3 +111,11 @@
 *** 将系动词替换为be动词后,句子的语义基本不变
 **** she looked a little tired.
 **** she was a little tired.
+* 形容词
+** 定义:修饰名词和代词, 给修饰的成分添加附加的信息
+** 说明事物或人的性质和特征
+* 句子构成
+** 名词可以作主语,宾语,表语和补语
+** 形容词可以作定语,表语和补语
+** 副词只能作状语
+** 动词只能作谓语

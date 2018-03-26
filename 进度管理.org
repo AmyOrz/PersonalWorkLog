@@ -1,15 +1,28 @@
 * 2.26-4.10号需求整理
-*** TODO add GameObject(0.5d)
+*** DONE add GameObject(0.5d)
 **** TODO dispose gameObject keep order
-*** TODO add component(0.5d)
+*** DONE add component(0.5d)
 *** TODO 运行与停止 (9天)
 **** we need two canvas
-**** 停止阶段不启动循环,每次根据事件触发重新渲染一次.然后保存
-**** 运行时启动循环,读取js脚本,此时动态改变各属性,不保存该状态,停止既恢复到运行前的状态,
-
-
+**** 停止阶段不启动循环,每次根据事件改变state, 拿state去触发渲染一次
+**** 运行时拿当前state去启动循环,读取js脚本,此时动态改变各属性,不保存该状态,停止既恢复到运行前的state
+**** DONE 这里涉及到引擎启动和结束循环的问题,以及如何渲染单独帧的问题
+**** DONE 需要知道引擎执行过程 
+***** init -> loopBody 执行一次
+***** 在loopService中封装了requestAnimationFrame, 需要保存在editorState中
+***** DONE 如何处理事件,把需要改变state的事件放在哪里?
+****** 放在getAndRefreshEngineState 上
+**** DONE 需要2个engineState
+***** 当addBox时, 需要使用getTwoEngineState
+***** 当获取transform时, 只需要获取一个engineState
+**** DONE redo/undo功能需要针对2个engineState
+***** DONE 我们拿2个engineState去执行undo操作, 然后undo stack被执行了2次, 也就是2次undo
+***** DONE 直接在allHistorySTate里添加forRun 和 forEdit, 这样直接一起undo/redo
+***** TODO 需要stack存储run之前的state, 然后stop后restore
+**** TODO 需要搭建对2个engineState的测试环境, 不然测试无法通过对engineStateForRun的测试
 **** TODO add scene camera
 ***** it can't be disposed
+**** resize viewport 
 *** TODO 资源管理 (9天)
 **** 上传图片,js文件(获取base64缓存到indexDb)
 **** 将资源添加到GameObject
@@ -28,7 +41,9 @@
 *** TODO data collection
 **** give pv/dv, ... statistic
 *** TODO 用户流程
-**** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将信息保存到我们服务器,信息保存为indexDb,存在丢失风险
+**** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将演唱会
+在二十五岁
+恋爱是风信息保存到我们服务器,信息保存为indexDb,存在丢失风险
 **** 读取/保存 项目
 ***** 没有登录
 ****** 访问本地indexDb看是否存在项目,存在则读取出来进行选择
@@ -56,17 +71,28 @@
 *** pass all tests
 **** unit, integration, render
 *** check code coverage
-*** git fetch and git rebase
+*** git fetch aand git rebase(git push origin dev: dev )
 *** checkout to master branch(git checkout master; git merge --no-ff origin dev)
 *** pass code climate
 *** pass ci
-*** bump release
+*** bumped release
 *** check changeLog
-*** pubsh git tag
+*** pubsh git tag(git push origin --tags)
 *** write github release 
 *** check all budgets
 *** check publish success(not do it now)
 **** download new tag project from github, build it, should pass render test
 
 * 问题集合
-** 1.
+** 1.无法显示GameObject1
+*** 删除GameObject2
+*** 删除GameObject1
+*** addGameObject
+*** 执行undo
+*** 执行undo
+* 引擎执行
+*** 首先需要load各种配置文件(pipeline 和 jobs)
+*** 然后根据pipeline中定义的job从map中取出相应的job函数
+*** 把这些函数存入到指定engineState中, 在引擎启动时执行pipeline中的job流水线
+*** 其中配置文件pipleline/ 中定义流水线, job/ 中定义相应的配置信息
+*** 一次loopBody就是一次渲染流水线
