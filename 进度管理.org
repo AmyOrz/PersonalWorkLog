@@ -1,8 +1,26 @@
+* 4.11-5.01
+*** TODO finish sceneTree refactor after finish gameObject's name feat
+*** TODO finish demos(important!!!)
+*** TODO data collection
+**** give pv/dv, ... statistic
+*** TODO 用户流程
+**** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将信息保存到我们服务器,信息保存为indexDb,存在丢失风险
+**** 读取/保存 项目
+***** 没有登录
+****** 访问本地indexDb看是否存在项目,存在则读取0出来进行选择
+****** 保存为本地
+***** 登录
+****** 从服务器读取项目,进行选择
+**** 读取配置文件:我们将从用户本地缓存中读取配置文件
+***** 从服务器拉取默认配置,可以进行修改,保存到本地缓存,点击运行场景时读取配置进行渲染
+***** 所以我们都将从用户本地缓存中读取配置文件
+*** TODO ui
+**** 使用css module 重写css https://github.com/camsong/blog/issues/5
 * 2.26-4.10号需求整理
 *** DONE add GameObject(0.5d)
 **** TODO dispose gameObject keep order
 *** DONE add component(0.5d)
-*** TODO 运行与停止 (9天)
+*** DONE 运行与停止 (9天)
 **** we need two canvas
 **** 停止阶段不启动循环,每次根据事件改变state, 拿state去触发渲染一次
 **** 运行时拿当前state去启动循环,读取js脚本,此时动态改变各属性,不保存该状态,停止既恢复到运行前的state
@@ -19,46 +37,80 @@
 ***** DONE 我们拿2个engineState去执行undo操作, 然后undo stack被执行了2次, 也就是2次undo
 ***** DONE 直接在allHistorySTate里添加forRun 和 forEdit, 这样直接一起undo/redo
 ***** TODO 需要stack存储run之前的state, 然后stop后restore
-**** TODO 需要搭建对2个engineState的测试环境, 不然测试无法通过对engineStateForRun的测试
+**** DONE 需要搭建对2个engineState的测试环境, 不然测试无法通过对engineStateForRun的测试
+**** DONE 点击run的时候保存当前的堆栈信息, 在stop之后回来当前堆栈, 可以继续redo/undo
+***** DONE controller redo/undo
+****** 首先( undoStack, redoStack ) => (0,0) => | addGameObject | => (1,0) => | run | => (1,0) 压入controllerStack => | addGameObject | => (2,0) => | addGameObject | => (3,0)
+****** => | undo | => (2,1) => | stop | => (1,0) => | redo | => (1,0) => | undo | => (0,0)
 **** TODO add scene camera
 ***** it can't be disposed
-**** resize viewport 
-*** TODO 资源管理 (9天)
-**** 上传图片,js文件(获取base64缓存到indexDb)
-**** 将资源添加到GameObject
+**** TODO resize viewport 
+**** TODO test
+***** 引擎测试:
+****** DONE 
+engineSta          TestToolEngine.setFakeGl(sandbox);
+          AllMaterialToolEngine.prepareForInit();teFomrRun and forEdit 的引擎测试
+****** DONE addGameObject 
+****** DONE disposeGameObject 
+****** DONE addComponent 
+****** DONE change transform
+****** TODO change material
+***** redo/undo 测试
+****** DONE two engineState 在redo/undo时候的测试
+****** DONE run and stop 的redo/undo测试
+**** TODO store two currentGameObject uid in the editorState
+**button click* TODO 资源管理 (9天)
+**** TODO 资源树, ui
+**** TODO 上传图片,js文件(获取base64缓存到indexDb)
+**** TODO 将资源添加到GameObject
+*** DONE asset tree
+**** DONE remove folader
+**** DONE drag folder 
+***** DONE bug: 把一个treeNode拖放到自身, 出现错误
+**** DONE move file
+**** DONE upload json
+**** DONE select file and remove file
+**** DONE rename file and folder
+**** DONE show folder
+***** 把文件id存入currentFile
+***** 使用currentSource标记来源, 在inspector显示来源信息
+
+     
+**** DONE [#A] //// 优化drag event, drag event listener too much
+***** 在React中不会把所有的事件处理器绑定到相应的真实的DOM节点上，
+***** 而是使用一个统一的事件监听器，把所有的事件绑定在最外层。
+***** 当事件发生的时候，首先被这个统一的事件监听器处理，随后找到真正的事件处理函数进行调用，
+***** 这样是为了提高效率，这是因为在UI系统中，事件处理器越多，那么占据的内存就越大，
+***** React的做法是将其简化为一个，这样就大大提高了效率。
+**** DONE merge master, 引入引擎新版本 
+**** DONE test
+***** DONE rename 
+***** DONE header operate
+**** TODO bug
+***** TODO move gameObject2 to div, throw error
+****** TODO not exec shouldUpdate method
+       
+***** DONE move file to root treeNode, the file not only exist in the origin treeNode, but also in root one
+****** DONE fix 
+****** TODO write test
 *** TODO 导入和导出.wd文件 (9天)
 **** 将项目导出为文件,使用jszip,压缩为一个包
 **** 将项目导入进来,可以读取文件资源,渲染场景
-*** TODO js脚本 (3天)
 *** TODO picking, 相机设置 (3天)
 *** TODO transform
 **** rotation
-**** scale
+**** scale 
 
-* 4.11-5.01
-*** TODO finish demos(important!!!)
 
-*** TODO data collection
-**** give pv/dv, ... statistic
-*** TODO 用户流程
-**** 用户可以默认打开wonder-editor, 无需登录即可使用,但无法将演唱会
-在二十五岁
-恋爱是风信息保存到我们服务器,信息保存为indexDb,存在丢失风险
-**** 读取/保存 项目
-***** 没有登录
-****** 访问本地indexDb看是否存在项目,存在则读取出来进行选择
-****** 保存为本地
-***** 登录
-****** 从服务器读取项目,进行选择
-**** 读取配置文件:我们将从用户本地缓存中读取配置文件
-***** 从服务器拉取默认配置,可以进行修改,保存到本地缓存,点击运行场景时读取配置进行渲染
-***** 所以我们都将从用户本地缓存中读取配置文件
-*** TODO ui
-**** 使用css module 重写css https://github.com/camsong/blog/issues/5
+*** TODO asset tree 
+**** open file by double click it
+     e.g. add modal to show image
 * after 1.0.0
 *** TODO 材质贴图设置 (3天)
 **** 从资源内获取纹理设置到GameObject
 
+**** TODO 创建材质文件,可以直接复用材质
+*** TODO js脚本 (3天)
 *** TODO pwa 设置 (3天)
 **** offline visit, cache
 **** app shell
@@ -66,57 +118,45 @@
 *** TODO mobile
 **** can simulate mobile in editor
 *** TODO 多人协作,改动同一个场景文件
-* 版本发布流程
-*** finish all TODO
-*** pass all tests
-**** unit, integration, render
-*** check code coverage
-*** git fetch aand git rebase(git push origin dev: dev )
-*** checkout to master branch(git checkout master; git merge --no-ff origin dev)
-*** pass code climate
-*** pass ci
-*** bumped release
-*** check changeLog
-*** pubsh git tag(git push origin --tags)
-*** write github release 
-*** check all budgets
-*** check publish success(not do it now)
-**** download new tag project from github, build it, should pass render test
-
+*** TODO redo/undo stack 是否无限添加 
+*** TODO UI
+**** TODO show scroll bar in area(e.g. asset tree)
+**** TODO hide asset-> file upload input dom 
+*** TODO Asset
+**** TODO sort file and folder by name
+***** support chinese 
 * 问题集合
-** 1.无法显示GameObject1
+** DONE 无法显示GameObject1
 *** 删除GameObject2
 *** 删除GameObject1
 *** addGameObject
 *** 执行undo
 *** 执行undo
-* 引擎执行
-*** 首先需要load各种配置文件(pipeline 和 jobs)
-*** 然后根据pipeline中定义的job从map中取出相应的job函数
-*** 把这些函数存入到指定engineState中, 在引擎启动时执行pipeline中的job流水线
-*** 其中配置文件pipleline/ 中定义流水线, job/ 中定义相应的配置信息
-*** 一次loopBody就是一次渲染流水线
-* 引擎问题
-*** 为GameObject添加component, 如何使用这些组件
-*** 这些组件在底层如何为GameObject添加信息
-**** 比如添加material组件添加color, 需要添加color矩阵, 以及对应的glsl, 着色器
-**** 根据组件来动态添加glsl片段, 组成完整的着色器片段, 进行渲染
-**** 这样我们就可以在每次update阶段进行数据更新, 然后进行render
-*** 每次loop引擎做了什么, 底层GPU做了什么
-**** 可以看webgl编程指南循环改变box的position  
-* 如何量变
-** 这些前提都是基于你处于中级的程度
-*** 对基础知识熟练掌握
-*** 熟悉基本数据结构和算法
-** 主动承担问题, 解决问题, 通过解决问题扩充自己的知识网
-*** 对待用不到的知识不需要太深入到细节, 而是形成知识网, 当用到具体细节时再去填充网中的细节知识
-** 对待工具应该保持最大掌握
-*** 掌握所有能让自己生产力提高的工具
-*** 掌握了工具使用也掌握了新的思维模式
-** 自动化重复工作
-*** 把所有需要重复的事情都写脚本让机器帮我们做
-*** 把时间花在思考问题上, 而不是重复编码
-** 代码质量
-*** 如何写出让自己和别人理解的代码
-*** 如何写出高质量的代码
-*** 运用常用的设计原则保持对代码的优化
+** TODO 点击运行后好像没什么提示,提示我已经开始run了
+* TODO bug
+*** DONE 先改变material, 再去改变transform, 点击undo, 直接回到初始状态
+*** DONE 所有engine测试,2个engineState的currentGameObject不一样,所以需要进行获取对应的currentGameObject
+*** DONE camera change size
+**** step
+***** click gameobject1 -> und --> click add box --> click add box
+
+
+**** reason
+     model matrix error?
+     geometry vertices data error?
+
+
+**** solution
+     
+*** DONE run and stop should check 
+**** TODO finish test
+     snapshot
+*** DONE can't remove last camera(should exist at least one)
+**** DONE finish test
+*** DONE can't click dispose when not select
+**** DONE finish test
+*** TODO add sourceInstance component make specific gameObject disappear
+*** TODO fix(extension): 
+
+    
+

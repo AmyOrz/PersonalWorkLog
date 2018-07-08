@@ -1,0 +1,112 @@
+***  你崇拜別人的時候，你就是不相信自己的，(因為)你覺得別人比你優秀。你不相信自己的時候，其實你內心是受傷的。你內心受傷的時候，你就會變得有攻擊性 。
+* git
+*** bumped release publish
+**** bumped release <major|minor|pacth>
+*** git reset
+**** 1.git reset --soft + commit：git将重置HEAD到指定commit,但git将停止在这里什么也不会做发生变化
+**** 1.git reset --hard + commit：git将重置HEAD到指定commit,并把所有文件回退到指定commit处，具有破坏性，使用请谨慎
+
+     
+* emacs technology
+***  切换输入法
+**** 1.ctrl+x
+**** 2.回车
+**** 3.ctrl+\
+
+*** spacemacs 操作git
+**** git add -i  ==> SPC g s,然后使用s去选择需要提交的文件,也可以 SPC g S添加当前文件
+**** git commit  ==> 在git选择界面按 c c, 输入完成后ctrl c + ctrl c完成commit，ctrl c + ctrl k取消commit
+**** git push    ==> 在git选择界面按 p, 然后选择提交分支, u 为master, 就能完成提交
+
+*** emacs操作快捷键
+**** 1.使用alt + 方向键（<-,->）切换标题等级
+**** 3.shift + 方向键（<-,->）可以快速切换todo
+**** 4.ctrl c + n 跳到下一个主标题, ctrl c + p 调到上一个主标题
+
+*** 如何在spacesmacs中添加模块
+**** 1.首先需要在~/.emacs.d/site-lisp/中添加模块文件夹,然后把模块文件.el放到文件夹中
+**** 2.在dotspacemacs/user-config中添加(add-to-list 'load-path "~/.emacs.d/site-lisp/auto-save")
+
+* 编程规范
+*** 一般在函数中不使用变量，直接使用函数替代变量，这样不必维护一个状态。
+*** 当函数中有多个地方同时使用一个函数时，可考虑提取为变量，目的在于缓存变量，提高性能(package-initialize)
+*** 完成功能要考虑到redo/undo的添加以及对应的测试
+*** 除了utils层可以直接从外部获取state(非纯操作), 其余函数都必须为纯函数
+*** function arguments add "func" postfix
+*** function arguments add into funcTuple
+*** move function arguments to behind attribute
+*** show attribute data structure 
+**** (assetTree => assetTreeArr)
+**** (assetTree => assetTreeList)
+* 测试规范
+*** ui测试分为snapshot 和 logic 层次测试
+*** 如果一个describe 描述的方法实现，可以直接描述，如果不是内部细节，前面加上test 加以描述，让读者知道这里在进行测试
+*** 完成功能首先考虑单元测试,设计组件太多考虑集成测试
+*** 完成能够从ui/editor/engine 3个层次考虑测试
+* most api
+*** debounce 
+**** 监听用户key in事件，是指定时间之后才会发射一个流出去，这处于用户输入时，我们需要在用户停止输入后500ms再发射流
+
+* 设计模式
+** 定义:开发人员经过大量实践, 总结出的围绕编程原则的模式, 是一类问题的通用解决模板, 帮助我们写出易扩展, 易维护, 易服用的代码.
+* 编程原则
+** DRY(don't repeat yourself)
+** 单一职责(函数职责单一)
+** 隐藏细节(提供API)
+
+* 如何量变
+** 这些前提都是基于你处于中级的程度
+*** 对基础知识熟练掌握
+*** 熟悉基本数据结构和算法
+** 主动承担问题, 解决问题, 通过解决问题扩充自己的知识网
+*** 对待用不到的知识不需要太深入到细节, 而是形成知识网, 当用到具体细节时再去填充网中的细节知识
+** 对待工具应该保持最大掌握
+*** 掌握所有能让自己生产力提高的工具
+*** 掌握了工具使用也掌握了新的思维模式
+** 自动化重复工作
+*** 把所有需要重复的事情都写脚本让机器帮我们做
+*** 把时间花在思考问题上, 而不是重复编码
+** 代码质量
+*** 如何写出让自己和别人理解的代码
+*** 如何写出高质量的代码
+*** 运用常用的设计原则保持对代码的优化
+* 引擎执行
+*** 首先需要load各种配置文件(pipeline 和 jobs)
+*** 然后根据pipeline中定义的job从map中取出相应的job函数
+*** 把这些函数存入到指定engineState中, 在引擎启动时执行pipeline中的job流水线
+*** 其中配置文件pipleline/ 中定义流水线, job/ 中定义相应的配置信息
+*** 一次loopBody就是一次渲染流水线
+* 引擎问题
+*** 为GameObject添加component, 如何使用这些组件
+*** 这些组件在底层如何为GameObject添加信息
+**** 比如添加material组件添加color, 需要添加color矩阵, 以及对应的glsl, 着色器
+**** 根据组件来动态添加glsl片段, 组成完整的着色器片段, 进行渲染
+**** 这样我们就可以在每次update阶段进行数据更新, 然后进行render
+*** 每次loop引擎做了什么, 底层GPU做了什么
+**** 可以看webgl编程指南循环改变box的position  
+*** 无法获取到geometry
+**** unsafeGetGameObjectGeometryComponent 获取到GameObject和GameObjectRecord, 但无法没有api能获取到geometry
+**** unsafeGetGeometryComponent 在GetComponentGameObjectService 中, 编辑器无法获取service
+
+* 版本发布流程
+*** finish all TODO
+*** pass all tests
+**** unit, integration, render
+*** check code coverage
+*** git fetch and git rebase(git push origin dev:dev )
+*** checkout to master branch(git checkout master; git merge --no-ff dev)
+*** pass code climate
+*** pass ci(https://github.com/Wonder-Technology/Wonder-Editor/commits/master)
+*** bumped release
+*** check changeLog
+*** pubsh git tag(git push origin --tags)
+*** write github release 
+*** check all budgets
+*** check publish success(not do it now)
+**** download new tag project from github, build it, should pass render test
+* 开发流程
+*** 先实现一个小功能(加载纹理)
+**** 先实现加载到nodeMap,然后写测试nodeMap里有没有纹理
+**** 思考引擎测试是否和用户逻辑相关,是否需要测试
+*** 完成(单元)测试之后
+*** 进行小功能重构

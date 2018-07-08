@@ -1,5 +1,5 @@
 * DONE redo/ undo
-*** DONE we are not need HistoryStore, should manage state ourself, should create three stack 
+*** DONE we do not need UI HistoryStore, should manage state ourself, should create three stack 
 **** 我们redo/undo记录是在动作执行前，所以执行动作时后改变store，进而改变ui
 **** 而最后finish时没有执行任何事情，所以并未更新ui状态，所以我们undo时回退到的版本和输入时一样,造成了误解
 *** DONE 无效输入也会造成finish触发
@@ -12,6 +12,42 @@
 **** 执行undo操作,sceneChild:[1,2,3,4],但1 的child还是存在，为[2]，这时2即是scene的child，又是 1 的child
 *** DONE 测试shouldUpdate
     
+
+
+* the transform redo/undo use onMarkRedoUndoByStackFirst
+* the other component redo/undo use onMarkRedoUndoByStackLast
+  
+
+* markRedoUndo 设计
+
+*** 一开始我们选中一个GameObject时，他的初始状态即（0 0 0） #fff 都已经压入undoStack
+*** 为什么使用markRedoUndoByStackFirst?
+这个方法只有transform或者说先修改了engineState的值，但是其实才把state压入stack时使用，
+因为一开始我们就改变了engineState，
+比如从(0 0 0) -> (12 0 0)，我们undoStack中有（0 0 0）这个stack，
+此时的（12 0 0 ）为中间状态，不需要压入stack中， 直接点击rudo可以回到（0 0 0）
+这个（12 0 0）就被压入了markRedoUndoStack，
+当再次改变transform，如（12 0 0）-> (12 12 0)，
+此时我们点击undo希望回到（12 0 0），
+所以需要把（12 0 0）从markRedoUndoStack取出，并压入到undoStack中
+*** 为什么需要markRedoUndoByStackLast?
+如果我们配合修改color然后再修改transform这2个操作
+我们初始#fff，我们修改了color，#fff->#000,点击undo希望回到#fff，
+所以undoStack中需要（#fff），如果我们把这个#fff压入undoStack中，那就存在2次#fff，
+所以修改color也应该是压入markRedoUndoStack，
+当我们修改transform（0 0 0）-> (12 0 0),
+此时我们点击undo希望回到#000, (0 0 0),
+所以我们希望#000这个engineState被压入undoStack,
+但是因为我们都是先压栈后变值,所以把#fff压入undoStack,
+#000并未被压入undoStack,他和(12 0 0)一起存在于一个新的engineState,
+点击undo回到了#fff (0 0 0), 所以需要把#000先存入engineState, 再把这个engineState压入undoStack
+
+
+
+
+
+
+
 * DONE add gameObject
 *** TODO finish engine test
   
@@ -53,7 +89,8 @@
 * TODO 添加camera
 * 删除component
 * 什么是数据和逻辑分离
-*** 当多个模块操作一个数据时, 这时数据不应该和某一个模块耦合在一起, 而应该单独提出数据层, 由多个模块访问这个数据层获取数据
+当多个模块操作一个数据时, 这时数据不应该和某一个模块耦合在一起,
+而应该单独提出数据层, 由多个模块访问这个数据层获取数据
 
 * extract 微服务架构
 *** DONE 是否需要把composite 中提供的api  --> 用户只调用facade

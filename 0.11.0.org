@@ -1,0 +1,38 @@
+* feature
+** load img convert to texture 
+** show texture props(name,wrap,filter)
+** change texture name,change nodeMap and engineState
+** change gameObject name
+** extract assetState
+** drag texture to gameObject material
+** set gameObject material texture is null
+** finish test
+
+
+
+** DONE set texture to null
+** TODO file, folder path should be unique
+*** if create/import folder/file with the same name, add postfix(2,3,...)
+** DONE Assetk
+*** DONE drag file into assetFile folder
+** TODO add job script
+* bug:
+** DONE first show gameObject inspector, the texture inspector css error
+** DONE rename gameObject twice, click undo, throw errork
+** TODO fix bug:
+   1.drag texture to set gameObject 
+   2.set transform x
+   3.click undo
+*** DONE click set null many time, push undo stack many time
+* test:
+** DONE test assetState, file load a texture, click undo, nothing change
+
+   
+
+之前只有json和image, 所以设计nodeMapType为 name type result(string)
+后面改动成为需要texture, 因为texture存储int, 所以这里涉及到类型转换
+这里type不一样,当时就应该思考抽出多个nodemap存储,为什么不提?
+因为麻烦?当时设计已经有问题了. 
+而且folder是不需要result, texture不需要name的,强行加在一起.
+也就是说这次重构非常有必要,为何之前写代码时明明已经感觉到别扭,还是坚持写了下去
+

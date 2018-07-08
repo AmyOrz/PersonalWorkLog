@@ -1,0 +1,78 @@
+
+* 0.10.0 version
+
+** TODO bug
+*** DONE inspector can't show file postfix
+*** DONE move file to other folder error
+    
+    
+*** DONE remove
+
+**** DONE remove folder should remove its and its all children->files
+
+**** DONE shouldn't "remove file" to folder
+    1.import file a in folder A
+    2.click a
+    3.click A
+    4.click "remove file"
+    5.click other folder B
+    6.error
+     
+
+
+
+*** css error?(how to reproduce?)
+
+*** DONE file content
+***** DONE show folder
+*** DONE rename folder/file
+**** DONE add check
+**** DONE root folder can't be rename
+
+     
+
+*** DONE drag(scene tree, asset tree)(should continue test)
+**** DONE shouldn't show target along mouse
+
+     
+
+*** DONE edit canvas not resize
+    
+
+
+*** DONE debounce reduce(to 200)
+    
+    
+
+*** DONE asset tool: remove fileId, ... 
+
+
+*** DONE remove folder in assetFile
+    
+*** TODO 卡顿问题(内存泄露?)??
+    
+*** TODO benchmark test
+
+ 
+*** DONE single click folder then double click it, throw error
+
+*** DONE all: add "test editorState->asset record" test cases
+    
+*** DONE transform redo/undo error
+**** click gameObject1
+**** set transform x = 12
+**** click undo
+**** the value always 12,but the engine is change
+**** shouldUpdate???
+*** DONE move function arguments to behind attribute
+*** DONE show attribute data structure 
+**** (assetTree => assetTreeArr)
+**** (assetTree => assetTreeList)
+
+
+*** DONE add bug test
+    bug: drag into div disposed 
+*** DONE fix: MainEditorAssetChildrenNode.re  
+**** load file
+**** pick the name
+**** the img/json's image become bigger

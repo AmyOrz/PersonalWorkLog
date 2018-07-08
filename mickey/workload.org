@@ -1,0 +1,407 @@
+* 4月份
+** 4-17
+*** 7.00-10.00   编程2小时, 开会半小时, 吃早点半小时
+*** 10.00-10.48  睡觉
+*** 11.00-12.00  编码1小时
+*** 12.30-1.20   吃午饭,玩三国杀
+*** 1.20-2.20    编码1小时
+*** 2.20-3.10    睡觉,玩手机
+*** 3.10-4.10    编码1小时
+*** 4.30-7.50    玩游戏
+*** 8.00-10.10   编码2小时
+** 4.18
+*** 7.00-9.40    编码2小时, 吃东西半小时
+*** 10.00-13.30  睡觉
+*** 13.30-14.30  吃饭
+*** 14.30- 16.00 审核代码1.5小时
+*** 16.00-16.30  看知乎, 创业人的故事
+*** 16.30-17.00  编码半小时
+*** 17.00-23.00  玩游戏...
+** 4.23
+*** 13.00-18.30  讨论项目需求以及整理制度, 有效时间3h 
+** 4.24 
+*** 7.00-15.30   睡觉
+*** 15.30-17.30  编码2h
+*** 17.30-18.30  吃饭,玩了会三国杀
+*** 18.30-19.30  编码1h
+*** 8.00-23.00   公会开荒
+** 4.25
+*** 8.30-9.00    morning meeting, eat breakfast
+*** 9.00-11.00   code 2h
+*** 11.00-13.30  sleep, eat food
+*** 13.30-16.00  code 2.5h
+*** 16.00-18.00  sleep
+*** 18.00-20.00  code 2h
+*** 20.00-20.30  eat food, take delivery
+*** 20.30-23.00  code 2.5h
+*** total        9h
+** 4.26
+*** 6.30-7.00    洗澡,吃早点
+*** 7.00-10.00   code 3h
+*** 10.00-14.00  玩游戏, 吃饭
+*** 14.00-17.30  code 3h,躺了有30分钟
+** 4.27
+*** 9.20-11.20   开会,code 2h:完成文件对象Most处理
+*** 11.20-12.50  睡觉, 吃饭
+*** 12.50-14.30  code 1.3h 
+*** 14.30-16.00  睡觉
+*** 16.00-17.30  code1.3h
+
+
+      let editorState = StateEditorService.getState();
+      let (newIndex, editorState) = editorState |> AssetUtils.increaseIndex;
+** 4.28
+*** 14.00-16.00 code 2h:完成readFile 和handleFile, 存入imageMap中
+*** 16.00-19.00 睡觉
+*** 19.00Sdate
+
+201 8.06.13
+
+totalhao
+
+5.5小时
+
+剩余129
+
+par-21.10 c[ 'flet isDeletbanbened = item => item |> Obj.magic |> Js.Nullable.test;
+
+let length = Js.Array.length;ck last',
+      [ <18 empty items>,
+        [ 'Asset', 0, 0 ],
+        [ 'newFolder', 0, 0 ],
+        <5 empty items> ] ]ode 2h 完成clsadd fileOpsulotionerateGameObjectEventTool into type nodeResultType = {
+  name: string,
+  type_: assetNodeType,
+  result: string,
+};fileMap and assetTree
+*** 21-23  code 2h
+** 4.29
+*** 12.00-14.00  吃饭
+*** 14.00-15.30  code 1.5h
+** 4.30
+*** 中午吃饭39,人均20
+*** 14.00-16.00  code 2h
+* 5月份
+** 5.1
+*** date
+
+2018.05.30
+
+total
+
+7小时
+
+剩余1777.40-8.40  co9.00-12.00de 1h
+*** 8.40-9.10  吃东西
+*** 9.10-10.10  code 1h
+*** 10.10-14.40  睡觉,玩游
+*** 14.40-16.10  code 1.5h
+** 5.2
+*** 12.00-14.00  吃饭
+*** 14.00-15.00  code 1h
+*** 15.00-15.10  躺了20分钟
+*** 15.10-16.40  code 1.5h
+*** 17.10-17.40  code 0.5h
+*** 17.40-18.40  运动一小时
+*** 18.40-22.00  code 3h,中间洗衣服20分钟
+** 5.3
+*** 03.30-7.00  code 2.5h, 吃饭and玩游戏一个小时
+*** 7.00-14.30  睡觉
+*** 14.30-19.10  吃饭, 玩游戏
+*** 19.30-23.30 code 4h
+** 5.4
+*** 6.00-8.00    code 2h
+*** 8.00-8.40    eat food
+*** 9.00-13.45   sleep
+*** 14.30-17.00  code 2h, 买药上厕所0.5h
+*** 18.00-19.30  code 1.5h
+*** 19.30-21.00  健身休息
+*** 21.00-21.30  code0.5h
+** 5.5
+*** 7.00-15.30  eat food, and sleep
+*** 15.30-18.00  code 2.5h
+*** 18.30-19.00  code 0.5h
+** 5.6
+** 5.8
+*** 7.00-13.00  sleep, eat food
+*** 13.00-14.30  code 1h, play game 0.5h
+*** 14.30-17.30  sleep
+*** 17.30-19.30  code 2h 
+** 5.9
+*** 03.00-05.30  code2h, play game 0.5h 
+**** 完成gameObject, folder, file在inspector的显示, 根据sourceType进行切换
+**** TODO 存在一点bug, input框需要绑定onChange事件
+*** 05.30-13.30  sleep, eat food
+*** 13.30-15.30 code 2h
+*** 15.30-17.00  sleep
+*** 17.00-18.40  code 1h, play game 40m
+*** 19.00-22.00  code 2h, play game 1h 
+**** finish remove file
+** 5.10
+*** 3.00-5.30 code 2h, play game 0.5h 
+**** finish remove file
+*** 5.30-11.00 play game 
+*** 11.00-17.30  eat food, sleep
+*** 17.30-19.30  code 2h
+**** finish fix and pass test
+*** 
+** 5.12
+*** 9.00-11.40    have a bathe 10m, code 2.5h
+*** 11.40-12.30   eat food, play game
+*** 12.30-16.30   sleep
+*** 16.30-18.00   code 1.5h
+*** 18.00-20.00   eat food
+*** 20.00-22.30   code 1.5h
+** 5.13
+*** 03.00-06.00 code 3h
+**** finsih assettree drag test
+*** 06.00-14.00  eat food, sleep, eat 15
+*** 14.00-15.30  code 1.5h
+*** 21.30-23.30  code 2h
+** 5.14
+*** 8.00-8.30    吃早点
+*** 8.30-11.00   开会,code 2.5h
+*** 11.00-11.30  relax
+*** 11.30-12.30  洗澡,code0.5h
+*** 12.30-15.30  吃饭,讨论灵学,睡觉
+**** 服务他人确实是我的人生课题
+**** 最让我兴奋的是赚钱
+*** 15.30-18.30  code 3h
+** 5.15
+*** 9.00-12.00   code 3h
+*** 12.30-13.30  code 1h
+**** finish a bug
+*** 13.30-15.00  sleep  
+*** 15.00-16.00  code 1h
+** 5.16
+*** 03.30 - 05.00 code 1.5h
+**** 解决bug:无法移动文件到文件夹, 但代码设计不好, 需要重构
+**** 解决问题:移动文件后, 文件没有从原文件夹中删除
+**** 解决问题:拖动过程中鼠标附带的属性, 现在已经清除任何信息
+*** 14.30- 15.30  code 1h
+**** 解决问题: 在rename时候不显示文件后缀, 完成测试
+*** 15.30-16.30  sleep
+*** 16.30-17.30  code 1h
+**** DONE 解决问题:file rename check input value
+*** 17.30-18.00  洗澡,聊天
+*** 18.00-19.00 code 1h
+**** DONE 编写测试:check file rename input的测试
+*** 19.30-20.30  code 1h
+**** DONE 解决问题:root folder can't be rename
+**** DONE 编写测试:root folder can't be rename
+**** DONE 解决问题: folder rename
+*** 21.00 - 22.00 code 1h
+**** DONE 解决问题:shouldn't "remove file" to folder
+**** DONE 编写测试:shouldn't "remove file" to folder
+**** TODO 功能: show folder in file content
+** 5.17
+*** 6.00-7.00  code1h
+**** DONE show folder in file content
+*** 7.00-7.30  eat food
+*** 7.30-9.00  code 1.5h
+*** 9.00-13.30 帮朋友整理需求
+*** 13.30-16.30 code 3h
+**** TODO 没能解决doubleCLick的问题
+**** TODO select folder in file content
+***** the click and double click can't register the same dom
+**** TODO need test: show folder in file content
+** 5.18
+*** 9.30-11.00  code 1.5h
+**** DONE 获取方案:doubleClick frp
+*** 11.00-12.00 code 1h
+**** DONE refactor doubleClick
+*** 12.00-13.00 eat food
+*** 13.00-15.00 code 2h
+**** DONE 解决设计:把fileContent中都设置为currentFile, 添加folderType
+**** DONE 完成show folder功能
+**** DONE 存在bug: 点击folder, removeFile 可以点击, 而removeFolder不可以
+*** 15.00-16.30  sleep, play game
+*** 16.30-18.00 code 1.5h 
+**** DONE 完成bug:存在bug: 点击folder, removeFile 可以点击, 而removeFolder不可以
+**** TODO 完成测试:修复以前测试
+**** TODO 完成测试:新加入代码测试
+** 5.19
+*** 14.30-15.30 code 2h
+**** DONE 解决测试
+*** 18.30-19.30 code 1h
+**** DONE 解决问题:addEventListener 需要 stub
+** 5.20
+*** 13.30-14.30  code 1h
+**** DONE 解决问题: addEventListener
+*** 14.30-15.50  code 1h, eat 20m
+**** TODO write test:click and double folder
+** 5.21
+*** 7.00 - 16.00  睡觉, 理发, 调整状态
+*** 16.00 - 17.30 运动
+*** 18.00 - 21.00 code 3h
+**** DONE 完成测试:single click and double click
+**** DONE refactor: rename gameObject, treeNode, file
+**** 看书:看书果然容易犯困
+** 5.22
+***  96276808 
+*** 3.00-4.00 学习英语 1h
+*** 5.00-7.00 code 2h 
+**** DONE 查看代码
+*** 7.30-9.00 code 1.5h
+**** DONE 讨论设计
+*** 9.00-12.00 sleep
+*** 12.00-14.30 eat food
+*** 14.30-18.00  sleep
+*** 
+** 5.23
+*** TODO 欠账48
+*** 7.00-7.30 eat food
+*** 7.30-9.30 code 2h
+*** 9.30-12.30  sleep
+*** 12.30-13.30 eat food , play game
+*** 13.30-15.00 code 1.5h
+**** 重写一部分
+*** 19.00-21.00 code 2h
+**** 明天就可以重写完成了. 还有测试
+** 5.24
+*** TODO 欠账66
+*** 7.00-8.00  洗澡,吃早点
+*** 8.00-10.30  code2.5h
+*** 10.30-14.00 休息, 吃饭,玩游戏
+*** 14.00-15.00 code 1h
+*** 17.00-18.00 code 1h
+**** DONE 讨论设计
+*** 19.30-21.00  code 1.5h
+** 5.25
+*** 7.30-8.10 起床吃早点
+*** 8.10-10.10 code 2h
+*** 10.10-14.30  sleep, eat food
+*** 14.30 - 17.00 code 2.5h
+*** 20.00-22.30  code 2.5h
+** 5.27
+*** 10.00-11.30  code 1.5h
+*** 13.40-17.40  code 4h
+** 5.28
+*** 7.10-9.10  code 2h
+*** 13.30- 16.00 code 2.5h
+*** 健身一个半小时
+*** 19.30-21.00  code 1.5h
+** 5.30
+*** 9.00-9.40 code 0.5h
+*** 10.10-11.40 code 1.5h
+*** 16.30-18.00  code 1.5h
+*** 19.30-23.00  code 3.5h
+** 5.31
+*** 9.30-11.00  code 1.5h
+*** 14.00-17.30 code 3.5h
+* 6月份
+** 6.1
+*** 13.00-16.00 code 3h
+*** 
+** 6.4
+*** 9.10-11.40 code 2.5h
+**** 开会
+**** 按照最新reason react 版本修改代码
+*** 16.30-18.30 code 2h 
+*** 19.30-22.00  code 2.5h
+** 6.5
+*** 9.30-11.30 code  2h
+*** 13.30-15.00 code 1.5h
+*** 16.30-19.30 code 3h
+** 6.6
+*** 10.00-12.00  code 2h
+*** 14.30-16.00 code 1.5h
+**** DONE 添加editor test
+*** 17.00-19.00  code 2h
+**** DONE finish nodeMap test
+*** 20.00 - 22.00 code 2h
+** 6.7
+*** 16.30-18.00  code 1.5h
+**** 修改 TODO
+*** 19.30-21.30  code 2h
+**** finish all TODO
+** 6.8
+*** 10.30-12.00  code 1.5h
+*** 15.30-18.30  code 3h
+** 6.11
+*** 10.30-11.30  code 1h
+**** 重构完所有文件
+*** 15.00-18.00 code 3h
+** 6.12
+*** 7.30-8.30  跑步，吃早点
+*** 8.30-10.00 code 1.5h 
+** 6.13
+*** 13.30-17.30  code 4h
+*** 21.00-22.30  read book 1.5h
+** 6.14
+*** 9.10-11.10  code 2h
+*** 14.00-16.00 read opengl 2h
+** 6.15
+*** 9.30-12.00  read 1h, code 1.5h
+*** 13.30-16.00 code 2.5h
+** 6.17
+*** 16.30-18.00 code 1.5h
+*** 19.10-21.40 code 2.5h
+** 6.18
+*** 6.00 - 6.30 起床锻炼颈椎
+*** 6.30 - 7.10 跑步吃早点
+*** 7.20 - 8.20 code 1h
+*** 10.30 - 12.00 code 1.5h
+*** 14.00 - 15.30 code 1.5h
+*** 19.10 - 21.40 code 2.5h 
+** 6.19
+*** 8.30 - 10.30 code 2h
+*** 13.30-15.00 code 1.5h
+*** 15.30-16.30 code 1h
+*** 21.00-22.00 code 1h
+** 6.20
+*** 9.00-11.30  2.5h
+*** 12.30-13.00 code 0.5h
+**** use getAndRefreshEngineStateWithDiff instead of getAndRefreshEngineState
+*** 14.00-15.30 1.5h
+**** read 1.5h
+** 6.21
+*** 16.30-18.00 code 1.5h
+*** 18.30-22.00 code 3.5h
+** 6.22
+*** 10.30-12.00 code 1.5h
+*** 13.00-14.00 code 1h
+*** 16.30-17.00 code 0.5h
+** 6.23 
+*** 8.30-11.30 code 3h
+*** 15.30-17.30 code 2h
+*** 19.30-20.00 code 0.5h
+*** 20.40-21.40 code 1h
+** 6.25
+*** 10.00-12.30 code 2.5h
+*** 15.20-17.30 code 2h
+*** 19.30-22.30 code 3h
+** 6.26
+*** 15.30-16.40 code 1h
+*** 18.30-21.30 code 3h
+** 6.27
+*** 8.30-10.00 code 1.5h
+**** DONE 显示name在scenetree和inspector
+*** 13.40-15.40 code 2h
+**** DONE 修改name
+**** TODO 添加texture name
+* 7月份
+** 7.2 
+*** 11.00-12.00 code 1h
+*** 15.30-18.00 code 2.5h
+*** 19.30-20.30 code 1h
+** 7.3
+*** 13.00-14.00 1h
+**** finish gameObject rename redo/undo
+*** 16.00-17.10 1h
+*** 19.30-22.00 2.5h
+** 7.4
+*** 7.00-8.20 code 1h
+*** 9.30-12.00 code 2.5h
+*** 13.00-14.00 code 1h
+** 7.6
+*** 13.00-14.00 code 1h
+** 7.7
+*** 9.30-12.30 code 3h
+*** 15.00-
+** 7.8
+*** 9.20-12.20   3h
+*** 13.30-14.30  1h
+*** 15.30-17.30  2h
+*** 18.00-18.30  0.5h
+*** 19.00-
