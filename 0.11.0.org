@@ -11,19 +11,38 @@
 
 
 ** DONE set texture to null
-** TODO file, folder path should be unique
+** TODO [#C] file, folder path should be unique
 *** if create/import folder/file with the same name, add postfix(2,3,...)
-** DONE Assetk
+** DONE Asset
 *** DONE drag file into assetFile folder
-** TODO add job script
+** TODO [#C] add job script
+** TODO [#C] the file should behind the folder
+** TODO [#C] the folder name shouldn't be same
+** TODO [#C] add camera and add light material
+** TODO [#A] gameObject select color should same as unity
+** TODO inspector component
+*** TODO add sourceinstance component-> should only add once
+   
+
+
+
+** DONE optimize set color add undo stack
+** TODO textureInspector 
+*** TODO [#A] rename asset file->add postfix check
 * bug:
 ** DONE first show gameObject inspector, the texture inspector css error
 ** DONE rename gameObject twice, click undo, throw errork
-** TODO fix bug:
+** DONE fix bug: 
    1.drag texture to set gameObject 
    2.set transform x
    3.click undo
 *** DONE click set null many time, push undo stack many time
+** DONE fix bug: should update
+   1.select gameObject 
+   2.add gameObject 
+   3.rename gameObject
+** DONE fix bug
+*** DONE dispose should remove the one and all its children
 * test:
 ** DONE test assetState, file load a texture, click undo, nothing change
 
