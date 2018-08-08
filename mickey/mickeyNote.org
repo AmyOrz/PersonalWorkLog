@@ -1,11 +1,13 @@
-***  你崇拜別人的時候，你就是不相信自己的，(因為)你覺得別人比你優秀。你不相信自己的時候，其實你內心是受傷的。你內心受傷的時候，你就會變得有攻擊性 。
+***  请相信坚持的力量.
 * git
 *** bumped release publish
 **** bumped release <major|minor|pacth>
 *** git reset
 **** 1.git reset --soft + commit：git将重置HEAD到指定commit,但git将停止在这里什么也不会做发生变化
 **** 1.git reset --hard + commit：git将重置HEAD到指定commit,并把所有文件回退到指定commit处，具有破坏性，使用请谨慎
-
+*** git log --stat  查看每次log修改的文件
+*** git log -1 -p -- filepath  查看上次log文件修改情况
+*** gitk也可以查看
      
 * emacs technology
 ***  切换输入法
@@ -39,46 +41,7 @@
 **** (assetTree => assetTreeArr)
 **** (assetTree => assetTreeList)
 * 测试规范
-*** ui测=======
-    let _getRemovedSceneGraphData = () =>
-      switch (
-        SceneEditorService.getCurrentSceneTreeNode
-        |> StateLogicService.getEditorState
-      ) {
-      | None =>
-        WonderLog.Log.error(
-          WonderLog.Log.buildErrorMessage(
-            ~title="disposeCurrentSceneTreeNode",
-            ~description=
-              {j|current gameObject should exist, but actual is None|j},
-            ~reason="",
-            ~solution={j|set current gameObject|j},
-            ~params={j||j},
-          ),
-        );
-        (sceneGraphArr, None);
-      | Some(gameObject) =>
-        CameraEngineService.isCamera(gameObject)
-        |> StateLogicService.getEngineStateToGetData ?
-          HeaderUtils.doesSceneHasRemoveableCamera() ?
-            {
-              let (newSceneGraphArr, removedTreeNode) =
-                sceneGraphArr
-                |> SceneTreeUtils.removeDragedTreeNode(gameObject);
-              (newSceneGraphArr, removedTreeNode |. Some);
-            } :
-            {
-              WonderLog.Log.warn({j|can't remove last camera|j});
-              (sceneGraphArr, None);
-            } :
-          {
-            let (newSceneGraphArr, removedTreeNode) =
-              sceneGraphArr |> SceneTreeUtils.removeDragedTreeNode(gameObject);
-            (newSceneGraphArr, removedTreeNode |. Some);
-          }
-      };
->>>>>>> 8f76fb41c78bbf8347f3981e0bbf75a730cbc9cf
-试分为snapshot 和 logic 层次测试
+*** ui测试分为snapshot 和 logic 层次测试
 *** 如果一个describe 描述的方法实现，可以直接描述，如果不是内部细节，前面加上test 加以描述，让读者知道这里在进行测试
 *** 完成功能首先考虑单元测试,设计组件太多考虑集成测试
 *** 完成能够从ui/editor/engine 3个层次考虑测试

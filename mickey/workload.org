@@ -42,7 +42,7 @@
 *** 14.00-17.30  code 3h,躺了有30分钟
 ** 4.27
 *** 9.20-11.20   开会,code 2h:完成文件对象Most处理
-*** 11.20-12.50  睡觉, 吃饭
+*** 11.lder20-12.50  睡觉, 吃饭
 *** 12.50-14.30  code 1.3h 
 *** 14.30-16.00  睡觉
 *** 16.00-17.30  code1.3h
@@ -53,9 +53,24 @@
 ** 4.28
 *** 14.00-16.00 code 2h:完成readFile 和handleFile, 存入imageMap中
 *** 16.00-19.00 睡觉
-*** 19.00Sdate
+*** 19.00Scameradate
 
-2  0    MainEditorlSceneTool.initStateAndGl(~sandbox, ());
+2ne  0 print   MainEdlet getMaterialComponent = (gameObject, engineState) =>
+  _getNotNeedCom          let cameraComponentCount =
+            ComponentDomTool.getCameraComponentCount();
+          let cameraCategoryDomIndex =
+            ComponentDomTool.getCameraCategoryDomIndex();
+          let arcballCameraTypeDomIndex =
+            ComponentDomTool.getArcballCameraControllerTypeDomIndex();
+
+          OperateComponentEventTool.addComponentIntoCurrentGameObject(
+            cameraComponentCount,
+            cameraCategoryDomIndex,
+            arcballCameraTypeDomIndex,
+          );ponent()niyao;itowr    MainEditorMaterialUtils.replaceMatFileInputerialByType(
+      normalMaterialType,
+      materialType,
+    );lSceneTool.initStateAndGl(~sandbox, ());
       EventListenerTool.buildFakeDom()
       |> EventListenerTool.stubGetElementByIdReturnFakeDom;
     });01 8.06.13
@@ -455,4 +470,80 @@ total
 *** 9.30-12.40  3h
 *** 17.00-18.30 1.5h
 *** 19.00-20.00 1h
-
+** 7.19
+*** 9.30-12.30 3h
+*** 15.00-16.30 1.5h
+*** 19.30-23.00 3.5h
+** 7.20
+*** 8.50-11.50  3h
+*** 14.30-18.30 4h
+*** 19.30-20.30 1h
+** 7.21
+*** 9.00-11.30  2.5h
+*** 15.30-17.00 1.5h
+*** 19.30-22.30 3h
+** 7.22
+*** 9.00-12.00  3h
+*** 13.00-14.00 1h
+*** 15.10-16.40 1.5h
+** 7.23
+*** 9.00-12.30   3.5h
+*** 15.30-18.30  3h
+*** 19.30-20.30  1h
+**** TODO 添加direction light
+**** TODO 完成之前redo/undo test
+** 7.24 what fck this day
+*** 9.00-10.10  1h
+*** 14.00-18.30 4.5h
+** 7.25
+*** 9.00-12.00  3h
+*** 17.30-18.30 1h
+*** 19.30-20.30 1h
+*** 22.00-24.00 2h
+** 7.26
+*** 9.00-10.00   1h
+*** 11.00-12.30  1.5h
+*** 20.00-22.00  2h 
+** 7.27
+*** 9.00-12.30  3.5h
+*** 15.00-18.40 3.5h
+*** 19.30-20.30 1h
+*** 22.00-24.00 2h
+** 7.28
+*** 9.30-12.30 3h
+*** 15.00-18.30 3.5h
+*** 19.50-22.40 1h
+** 7.29
+*** 9.00-10.00 1h
+*** 15.00-18.30 3.5h
+* 8月份
+** 8.1
+*** 9.00-12.00 3h
+*** 17.10-18.40 1.5h
+*** 19.40-20.40 1h
+*** 23.00-24.00 1h
+** 8.2
+*** 9.00-12.00  3h
+*** 15.30-18.30 3h
+*** 19.30-20.40 1h
+*** 23.00-24.00 1h
+** 8.3
+*** 9.30-12.00 2.5h
+*** 15.30-18.20 3h
+*** 19.10-20.30 1h
+*** 22.30-24.00 1.5h
+** 8.4
+*** 9.00-12.00  3h
+*** 16.00-18.30 2.5h
+*** 19.40-20.40 1h
+** 8.5  what the fck this day
+*** 9.00-12.30 3.5h
+*** 16.30-18.30 2h
+*** 19.40-20.40 1h
+*** 22.30-00.30 2h
+** 8.6
+*** 10.40-12.40 2h
+*** 14.20-19.00 4.5h
+*** 20.40-22.40 2h
+** 8.7
+*** 9.00-11.00  2h

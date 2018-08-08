@@ -18,14 +18,8 @@
 ** TODO [#C] add job script
 ** TODO [#C] the file should behind the folder
 ** TODO [#C] the folder name shouldn't be same
-** TODO [#C] add camera and add light material
-** TODO [#A] gameObject select color should same as unity
-** TODO inspector component
-*** TODO add sourceinstance component-> should only add once
-   
-
-
-
+** DONE [#C] add camera and add light material
+** DONE [#A] gameObject select color should same as unity
 ** DONE optimize set color add undo stack
 ** TODO textureInspector 
 *** TODO [#A] rename asset file->add postfix check

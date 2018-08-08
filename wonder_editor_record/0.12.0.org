@@ -1,0 +1,99 @@
+
+* 可以直接通过引擎底层map获取所以组件
+
+
+* DONE finsh 
+** DONE click run, change current camera, should change arcballCameraEvent
+** DONE show camera attribute
+**** DONE basicCameraView
+**** DONE perspectiveCamara
+** DONE need init gameObject after add component 
+** DONE run and stop  
+**** DONE the camera controller event
+** DONE show meshRender attribute
+** DONE can't add renderGroup
+** DONE dispose added component
+**** DONE arcball camera throw error
+**** DONE can't dispose material, because the meshRenderer need it
+**** DONE can't remove last camera
+** DONE add Material before add MeshRenderer
+**** DONE render group
+** DONE remove currentCamera, set last camera is currentCamera
+** DONE the IMGUI icon should change width and height
+** DONE camera 
+**** DONE ​- add multi cameras 
+**** DONE ​- ee add arcball camera
+**** DONE ​- icon -> IMGUI
+**** DONE set current camera
+** DONE 光照
+**** DONE ​- ambient light
+**** DONE ​- diction light
+**** DONE - point light
+**** DONE ​- icon -> IMGUI
+** DONE use camera instead of basicCameraView and perspectiveCamera
+** DONE add light count limit:
+**** DONE need add into addComponent 
+**** DONE need add into changeLightType
+** DONE add gameObject components sparseMap store it's components
+** DONE 添加lightMaterial
+**** TODO add name???? not need new
+** DONE add empty gameO          test(
+            "test gameObject should move from lightMaterialRenderArray to basicMaterialRenderArray",
+            () => {
+              let (basicMaterialRenderCount, lightMaterialRenderCount) =
+                MeshRendererToolEngine.getAllRenderArrayCount();
+
+              MainEditorMaterialTool.setMaterialTypeToBeBaiscMaterial();
+
+              MeshRendererToolEngine.getAllRenderArrayCount()
+              |>
+              expect == (
+                          basicMaterialRenderCount + 1,
+                          lightMaterialRenderCount - 1,
+                        );
+            },
+          );bject
+   
+** DONE gameObject select color should same as unity
+** DONE blur value if not chsecond to firstange, not push undo stack
+** DONE scale shouldn't be 0
+** DONE transform
+**** DONE add rotation
+**** DONE add scale
+** DONE inspector component
+** DONE add sourceinstance component-> should only add once
+** DONE add ambient light  redo/undo feature
+** DONE use enginestate scene instead of editor state root
+** DONE all gameObject can add all component
+
+
+* bug:
+  
+** DONE fix bug:
+   1.select gameObject 
+   2.change gameObject material is baTODOsicMaterial
+   3.drag texture into it texture zone
+   4.click undo
+   5.click undo
+   
+   reason: undo engineState havn't asset texture, so throw error
+   
+** DONE fix bug:
+   1. arcballxuliangjieju camera unuseable
+   2. need event
+* test:
+** DONE add component engine test (meshrenderer  material test)
+** DONE add component snapshot test
+
+
+** DONE add lightMaterial redo/undo test
+** DONE add asset header redo/undo test
+** DONE add asset tree redo/undo test
+** DONE rename asset node redo/undo test
+** DONE add light materail shininess redo/undo test
+** DONE add direction light controller
+** DONE add dirnormalection light itensity redo/undo test
+** DONE add direction light color redo/undo test
+** DONE add light component redo/undo test
+** DONE add arcball camera test
+** DONE ambient light redo/undo test

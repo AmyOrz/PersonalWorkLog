@@ -1,0 +1,19 @@
+
+* feature
+** TODO [#C] file, folder path should be unique
+*** if create/import folder/file with the same name, add postfix(2,3,...)
+** TODO [#C] add job script
+** TODO [#C] the file should behind the folder
+** TODO [#C] the folder name shouldn't be same
+** TODO textureInspector 
+*** TODO [#A] rename asset file->add postfix check
+    
+* TODO todo 
+** TODO add customgeometry 
+*** [#A] next version
+** TODO add material and geometry in the asset
+** import and export wdb file
+
+* before 1.0
+** TODO load website need add loading
+** TODO can dispose camera
