@@ -37,25 +37,18 @@
 ** DONE add gameObject components sparseMap store it's components
 ** DONE 添加lightMaterial
 **** TODO add name???? not need new
-** DONE add empty gameO          test(
-            "test gameObject should move from lightMaterialRenderArray to basicMaterialRenderArray",
-            () => {
-              let (basicMaterialRenderCount, lightMaterialRenderCount) =
-                MeshRendererToolEngine.getAllRenderArrayCount();
-
-              MainEditorMaterialTool.setMaterialTypeToBeBaiscMaterial();
-
-              MeshRendererToolEngine.getAllRenderArrayCount()
-              |>
-              expect == (
-                          basicMaterialRenderCount + 1,
-                          lightMaterialRenderCount - 1,
-                        );
-            },
-          );bject
+** DONE add empty gameObject
    
 ** DONE gameObject select color should same as unity
-** DONE blur value if not chsecond to firstange, not push undo stack
+** DONE blur val   buildTwoCamera /* _isCameraGroup(type_) ?
+       editEngineState
+       |> CameraEngineService.getEditEngineStateEditCamera
+       |. GameObjectComponentEngineService.getBasicCameraViewComponent(
+            editEngineState,
+          )
+       |. BasicCameraViewEngineService.activeBasicCameraView(editEngineState)
+       |> StateLogicService.setEditEngineState :
+       editEngineState |> StateLogicService.setEditEngineState; */ue if not change value, not push undo stack
 ** DONE scale shouldn't be 0
 ** DONE transform
 **** DONE add rotation
@@ -81,6 +74,71 @@
 ** DONE fix bug:
    1. arcballxuliangjieju camera unuseable
    2. need event
+** DONE light material: add/remove map should keep color
+** DONE editor: arcball->distance and transform
+*** DONE set distance should update(inspctor)
+
+   when run:
+   change distance
+
+
+   expect: 
+   transform should update(inspector, imgui)
+
+
+
+   when edit:
+   change distance
+
+
+   expect: 
+   transform should update(inspector, imgui)
+
+   
+*** DONE set min distance should update distance(inspctor)
+    
+** DONE editor: arcballcamera
+
+*** DONE add arcballcamera should check event   
+    1. click run
+    2. add arcballCameraController
+    3. should add event????????
+      
+*** DONE remove currentCamera should check event
+   
+** DONE editor: arcball->when stop, should unbind all arcball
+** TODO engine: redo-undo bug
+   operation:
+   /*
+   remove renderGroup
+   undo
+   change light material to basic material
+   */
+   
+
+select gameObject
+undo
+   change light material to basic material
+   
+
+   description:
+   draw mode change to points(should be triangles)
+   (and switch draw mode, not affect)
+** TODO engine: create light
+
+*** TODO engine: create < 4(should <= 4)
+
+*** TODO create point light: when create 4 lights, error
+** TODO engine: arcball
+   when run:
+add new arcball component(with no cameraGroup)
+
+shouldn't affect current active arcball component
+
+
+
+
+
 * test:
 ** DONE add component engine test (meshrenderer  material test)
 ** DONE add component snapshot test

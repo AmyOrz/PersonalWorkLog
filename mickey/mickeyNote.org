@@ -39,7 +39,7 @@
 *** move function arguments to behind attribute
 *** show attribute data structure 
 **** (assetTree => assetTreeArr)
-**** (assetTree => assetTreeList)
+**** (assetTree => >assetTreeList)
 * 测试规范
 *** ui测试分为snapshot 和 logic 层次测试
 *** 如果一个describe 描述的方法实现，可以直接描述，如果不是内部细节，前面加上test 加以描述，让读者知道这里在进行测试
@@ -53,7 +53,7 @@
 ** 定义:开发人员经过大量实践, 总结出的围绕编程原则的模式, 是一类问题的通用解决模板, 帮助我们写出易扩展, 易维护, 易服用的代码.
 * 编程原则
 ** DRY(don't repeat yourself)
-** 单一职责(函数职责单一)
+** 单一职责(函jin数职责单一)
 ** 隐藏细节(提供API)
 
 * 如何量变

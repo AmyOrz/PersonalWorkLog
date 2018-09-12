@@ -54,14 +54,27 @@
 *** 14.00-16.00 code 2h:完成readFile 和handleFile, 存入imageMap中
 *** 16.00-19.00 睡觉
 *** 19.00Scameradate
+;
+2ne    )    }   WonderLog.Log.error(
+            WonderLog.Log.buildErrorMessage(
+          let aaa = checked => {
+  WonderLog.Log.print(checked) |> ignore;
 
-2ne  0 print   MainEdlet getMaterialComponent = (gameObject, engineState) =>
+  ChangeA(checked);
+};    ~titlprinte="error message",
+
+[11:59:56] Finished 'build' after 22 μs              ~description={j||j},
+              ~reason="",
+              ~solution={j||j},
+              ~params={j||j},
+            ),
+          );  0 print   MainEdlet getMaterialComponent = (gameObject, engineState) =>
   _getNotNeedCom          let cameraComponentCount =
             ComponentDomTool.getCameraComponentCount();
           let cameraCategoryDomIndex =
             ComponentDomTool.getCameraCategoryDomIndex();
           let arcballCameraTypeDomIndex =
-            ComponentDomTool.getArcballCameraControllerTypeDomIndex();
+      1      ComponentDomTool.getArcballCameraControllerTypeDomIndex();
 
           OperateComponentEventTool.addComponentIntoCurrentGameObject(
             cameraComponentCount,
@@ -547,3 +560,111 @@ total
 *** 20.40-22.40 2h
 ** 8.7
 *** 9.00-11.00  2h
+** 8.8
+*** 9.00-12.30 3.5h
+*** 16.30-19.30 3h 
+*** 22.30-23.30 1h
+** 8.9
+*** 9.00-12.30 3.5h
+*** 16.30-18.30 2h
+** 8.10
+*** 9.40-12.40 3h
+** 8.11
+*** 9.00-12.00 3h
+** 8.12
+*** 9.00-12.00 3h
+*** 15.00-16.30 1.5h
+*** 17.00-18.00 1h
+*** 19.40-20.40 1h
+*** 22.30-23.30 1h
+** 8.13
+*** 9.00-11.00 2h
+** 8.14
+*** 8.40-12.40  4h
+*** 16.00-17.00 1h
+*** 21.00-21.40  0.5h
+** 8.15
+*** 10.00-12.00  2h
+*** 13.00-14.40  1.5h
+*** 20.00-23.00  3h
+** 8.16
+*** 11.10-12.40  1.5h
+*** 15.30-18.00  2.5h
+*** 21.00-23.00  2h
+** 8.17
+*** 8.20-11.20 3h
+*** 13.00-13.30 0.5h
+** 8.18
+*** 10.10-12.10 2h
+*** 13.30-14.30 1h
+*** 18.30-20.30 2h
+*** 22.30-1.10  2.5h
+** 8.19
+*** 13.00-14.00 1h
+*** 15.00-16.00 1h
+** 8.20
+*** 9.30-12.30 3h
+*** 14.30-17.30 3h
+*** 19.00-21.00 2h
+** 8.22
+*** 9.30-12.30 3h
+*** 14.00-14.30 0.5h
+*** 15.30-17.30 2h
+*** 19.00-20.30 1.5h
+** 8.23
+*** 14.00-17.00 3h
+*** 20.00-22.00 2h
+*** 22.30-24.00 1.5h
+** 8.24
+*** 9.30-12.30 3h
+*** 14.00-15.30 1.5h
+*** 16.30-17.30 1h
+** 8.26
+*** 8.00-11.00 3h
+*** 15.00-16.30 1.5h
+*** 17.30-18.30 1h
+*** 19.00-20.30 1.5h
+** 8.27
+*** 9.30-12.00  2.5h
+*** 13.00-14.00 1h
+*** 16.40-18.40 2h
+*** 19.30-20.50 1.5h
+*** 22.30-24.00 1.5h
+** 8.28
+*** 9.00-11.30 2.5h
+*** 12.40-13.40 1h
+*** 16.00-16.30 0.5h
+** 8.29
+*** 9.30-12.00 2.5h
+*** 12.30-13.00 0.5h
+*** 15.30-18.00 2.5h
+*** 19.00-20.30 1.5h
+** 8.30
+*** 9.40-12.40   3h
+*** 14.00-15.00  1h
+** 8.31
+*** 12.30-13.00 0.5h
+*** 14.00-17.00 3h
+*** 19.00-20.30 1.5h
+*** 22.30-24.00 1.5h
+* 9月
+** 9.4
+*** 7.20-8.20 1h read book
+*** 9.00-12.00 3h
+*** 14.00-17.00 3h
+*** 18.30-21.30 3h
+** 9.5
+*** 10.30-12.00 1.5h
+*** 13.00-14.00 1h
+*** 15.30-17.30 2h
+*** 19.00-21.00 2h
+** 9.6
+*** 6.5h
+** 9.7
+*** 4h
+** 9.10
+*** 5.5h
+** 9.11
+***   morning:   3h
+*** afternoon:   3.5h
+***   evening:   2h

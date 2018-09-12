@@ -1,19 +1,82 @@
 
-* feature
+* summary
+***** 1
+      每个default的geometry和material只应该创建一次, 存到editorState上, 
+      然后每次使用时设置到GameObject上, GameObject上替换时也不应该有create和dispose操作
+      创建和删除只应该在asset里进行, GameObject只关联这2个组件
+
+
+* TODO feature
+
+** TODO test jest Prettier 
+** TODO test cp snapshot to test/
+
 ** TODO [#C] file, folder path should be unique
 *** if create/import folder/file with the same name, add postfix(2,3,...)
+*** 每次创建一个节点， 需要进行name验证， 需要获取该parent下所以children name， 来进行排查， 如果有就递归+1
+*** 每次drag时候也需要进行一次排查
+*** 如果我们存储parentId， 每次drag修改parentId， parent必须是个folder， 这样的话只需要把drag节点children路径重新修改一下就行
+*** 不进行缓存的话我们需要每次使用path都生成一次（如果使用过多就进行缓存， 不多就每次生成）
+** TODO import and export wdb file
+** TODO texture format
+    jpg rgb
+    png: rgba
+** TODO deep dispose asset, use new array manage the assetId 
+**** TODO remove asset material dispose from engine
+**** TODO remove asset texture dispose from texture
+**** TODO remove asset wdb model
+**** DONE use removedAssetIdArray's id
+**** DONE add test
+** TODO add material in asset
+** TODO set material name to engineState
+** TODO apply material in renderGroup 
+**** TODO drag 
+**** TODO modal select material
+**** TODO default material (can't change)
+
+
+* finish
+** DONE rewrite wonderLog use window.console_wonder.log
+** DONE fix arcball when run(@mickey)
+*** DONE change distance should refresh transform inspector
+*** DONE shouldn't change transform inspector
+
+** DONE truck wdb: should has multiple geometrys instead of one(@mickey)
+** DONE support undo after import scene wdb(@mickey
+** DONE support no camera?(@mickey)
+*** support dispose all camera gameObjects
+** DONE should store clone gameObject in editorState, remove asset wdb should remove it
+** DONE if the asset already set into gameObject, how to do it????
+**** store all use the asset's gameObject arr, and ,dispose these component
+**** get use the asset all gameObject, reduce remove thebw Controlle　　“坐实了！定罪了！”、rHeaderAddGameObject_test.js (asset
+** DONE remove asset wdb file, all use it geometry gameObject should remove it
+** DONE use asset wdb into scene, use clone
+** DONE add geometry in asset
+** DONE fix: upload model wdb file into scene wdb, set the model to be scene, we don't show the scene in sceneTree
+*** header should only upload package
+*** asset should only upload model
+*** should             /* TODO should store clone gameObject in editorState */check file type
+  
+** DONE add getAllUniqueGeometrys(gameObject, state)
+** DONE change geometry
+** DONE mainEditorConsole component
+** DONE add/remove geometry component
+
+
+* TODO need test 
+** DONE upload asset wdb file into asset, get it geometry add into geometryNodeMap
+*** DONE need test
+** TODO remove wdb
+
+* before 1.0
+** TODO change sceneTree like unity
+** TODO resize before loading error: gl not exist
+** TODO load website need add loading
+** TODO can dispose camera
 ** TODO [#C] add job script
 ** TODO [#C] the file should behind the folder
 ** TODO [#C] the folder name shouldn't be same
 ** TODO textureInspector 
 *** TODO [#A] rename asset file->add postfix check
-    
-* TODO todo 
-** TODO add customgeometry 
-*** [#A] next version
-** TODO add material and geometry in the asset
-** import and export wdb file
 
-* before 1.0
-** TODO load website need add loading
-** TODO can dispose camera
+
