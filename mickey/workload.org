@@ -668,3 +668,22 @@ total
 ***   morning:   3h
 *** afternoon:   3.5h
 ***   evening:   2h
+** 9.12
+*** 9.00-12.00   3h
+*** 13.00-16.00  3h
+*** 19.00-21.30  2.5h
+** 9.13
+*** 9.00-12.00  3h
+*** 14.00-17.30 3.5h
+** 9.18
+***   morning:   2h
+*** afternoon:   3h
+***   evening:   1.5h
+** 9.18
+***   morning:   3h
+*** afternoon:   3h
+***   evening:   1.5h
+** 9.19
+***   morning:   3h
+*** afternoon:   2.5h
+ 
