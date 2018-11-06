@@ -5,28 +5,43 @@
       创建和删除只应该在asset里进行, GameObject只关联这2个组件
 
 * TODO feature
-** TODO texture format
+  
+** TODO ui
+*** DONE font-size
+*** DONE header add "help"-> version, about us(link)
+*** TODO focus input then click "enter" should set value
+*** TODO loading style
+
+
+   
+
+* won't fix
+** DONE fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change(@mickey)
+
+   
+* finish
+** DONE add modal: user can set export-wonderpackage name
+** DONE console component should show message count in the title
+** DONE rename asset node should check
+** DONE set material name to engineState
+*** the texture and material name should be unquie. 
+*** if has same name, should change engineState name
+** DONE texture format
     jpg rgb
     png: rgba
     
-** TODO deep dispose asset, use new array manage the assetId 
+** DONE deep dispose asset, use new array manage the assetId 
 **** TODO remove asset material dispose from engine
 **** TODO remove asset texture dispose from texture
 **** TODO remove asset wdb model
 **** DONE use removedAssetIdArray's id
 **** DONE add test
-** TODO add material in asset
-** TODO set material name to engineState
-** TODO apply material in renderGroup 
+** DONE apply material in renderGroup 
 **** TODO drag 
 **** TODO modal select material
 **** TODO default material (can't change)
-** TODO add modal: user can set export-wonderpackage name
-* won't fix
-** DONE fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change(@mickey)
-
-
-* finish
+** DONE add material in asset
+** DONE can't drag asset node into the node which children has the same name node
 ** DONE add change snapshot utils after yarn
 ** DONE import and export texture file
 ** DONE can export .wonderpackage format instead of .zip format?(@mickey)
@@ -74,7 +89,7 @@ scene tree should be update!
 ** DONE mainEditorConsole component
 ** DONE add/remove geometry component
 
-* TODO need test 
+* TODO need 0test 
 ** DONE upload asset wdb file into asset, get it geometry add into geometryNodeMap
 *** DONE need test
 ** TODO remove wdb
@@ -84,10 +99,10 @@ scene tree should be update!
 ** TODO change sceneTree like unity
 ** TODO resize before loading error: gl not exist
 ** TODO load website need add loading
-** TODO can dispose camera
+** TODO can dispreplaceRenderGroupByMaterialTypeose camera
 ** TODO [#C] add job script
 ** TODO [#C] the file should behind the folder
-** TODO [#C] the folder name shouldn't be same
+** TODO [#C] the folder name shou;ldn't be same
 ** TODO textureInspector 
 *** TODO [#A] rename asset file->add postfix check
     
