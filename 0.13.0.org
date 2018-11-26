@@ -108,7 +108,14 @@ scene tree should be update!
     
 ma
 * TODO system
-*** TODO finsh person page
-*** TODO find password
-*** TODO change password
-*** TODO show user info(icon, blog, github)
+*** DONE find password
+*** DONE change password
+
+*** DONE finsh person page
+*** DONE upload img if the img is too large
+*** DONE create code random
+*** DONE change password 
+**** input two not same password
+**** change one is right
+*** TODO store password use md5 into mysql
+    
