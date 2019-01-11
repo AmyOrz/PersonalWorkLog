@@ -13,8 +13,7 @@
 *** TODO loading style
 
 
-   
-
+    
 * won't fix
 ** DONE fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change(@mickey)
 
@@ -89,10 +88,10 @@ scene tree should be update!
 ** DONE mainEditorConsole component
 ** DONE add/remove geometry component
 
-* TODO need 0test 
+* DONE need test 
 ** DONE upload asset wdb file into asset, get it geometry add into geometryNodeMap
 *** DONE need test
-** TODO remove wdb
+** DONE remove wdb
 
 * before 1.0
 ** TODO feat(transform inspector): improve input->select all(@mickey)
@@ -118,4 +117,112 @@ ma
 **** input two not same password
 **** change one is right
 *** TODO store password use md5 into mysql
-    
+*** DONE retrieve password
+**** DONE need add Verification Code change password
+*** DONE user login
+**** DONE login should put name and password to server check
+* TODO UE
+** TODO improve UE
+
+*** TODO fix(engine): gameView-> arcball: when mouse wheel too close
+**** the camera will phi down!!!???(but scene view->arcball not has this bug!!!???)
+
+
+
+*** TODO fix(inspector): inspector->material: 1.create material2 asset;
+2.change it's color to red in asset inspector; 
+3.gameObject1 select material2(color is red); but the color is still not change(white?);
+only after:
+select other gameObject;
+select the gameObject1 back;
+
+the material color change to red!!!
+
+
+
+*** TODO fix(import package): 0.open debug; 1.dispose all gameObjects except one box; 2.export package wpk1; 3.dispose the box; 4.import wpk1;    error->"expect component alive, but actual not" 
+
+
+*** TODO fix(import package): 0.open debug; 1.dispose all boxs; 2.import package DemoPackage1_room.wpk;   error: "expect all wdb gameObjects->materials should be material assets or default materials, but actual not"
+
+
+
+*** TODO fix(asset): fix "drag asset to folder node": should fail instead of rename
+
+
+*** TODO feat(run): show debug info(use imgui to show)
+show time(render, loop), fps,memory, draw call count, face count, gameObject count ...
+
+*** TODO feat(publish): add more config
+**** TODO cache
+stream load/common load support wdb cache
+
+setting.json add cache field?
+"Scene201812300750"?
+
+**** TODO use stream load
+
+
+
+**** TODO debug
+open contract
+
+not compress
+
+show debug info:
+for no worker and worker
+
+
+
+
+
+
+*** TODO add free camera
+*** TODO support click sceneTree node to focus(refer to unity)(shortcut: f)
+*** DONE "Add Component" should click other place to close
+
+*** TODO add "clone selected sceneTree node"
+**** TODO clone point light, the grid plane affected by light
+**** DONE clone one gameObject, add into scene, should add into it's parent
+
+*** DONE feat: inspector->map: add select list
+*** DONE feat: add create sphere
+*** DONE fix(ui): fix color picker->sketch-picker->height should be 100%
+
+
+*** TODO bind shortcut(not support edit)
+*** TODO feat(sceneTree): support drag to slibing
+
+*** TODO fix: change direction light to point light: when > 4 lights. the select option should still be direction light(test snapshot)(with @mickey)
+*** TODO feat: MeshRenderer inspector: add "isRender" checkbox
+
+
+*** TODO feat: export,import add waiting modal?
+
+*** TODO improve: texture inspector: show image(big size)
+*** TODO fix: add gameObject should add to sceneTree node->children
+
+*** TODO refactor: remove antd library
+
+*** TODO set format when import texture asset
+jpg rgb
+png: rgba
+
+*** DONE asset->name: add "..."
+
+*** TODO change ui
+**** TODO run-stop height change to fixed value instead of percent? (@mickey)
+
+*** TODO [#C] fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change
+
+*** TODO engine: imgui->slider: can't drag?
+
+
+*** TODO engine: firefox->arcball-> mouse scale not work
+
+
+
+
+
+
+
