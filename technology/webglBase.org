@@ -1,5 +1,5 @@
 * gl.clearColor(red, green, blue, alpha)
-*** 一旦指定了背景色之后, 背景色就会驻村在webgl系统中,在下次调用gl.clearColor前不会改变
+*** 一旦指定了背景色之后, 背景色就会驻存在webgl系统中,在下次调用gl.clearColor前不会改变
 * gl.clear(buffer)
 *** 将指定缓冲区设定为预定的值,如果buffer为颜色缓冲区, 那么将使用gl.clearColor指定的值
 * 数据类型
@@ -16,7 +16,7 @@
 **** transpose   一般为false
 **** array      类型化数组,4*4矩阵按列主序
 * 着色器
-*** 定点着色器: 控制点的位置和大小
+*** 顶点着色器: 控制点的位置和大小
 **** vec4 gl_Position  定点位置
 ***** 必须被赋值, 不然片元着色器无法工作
 **** float gl_PointSize 点的尺寸
@@ -25,26 +25,45 @@
 **** vec4 gl_FragColor  指定片元的颜色
 ***** 唯一内置变量, 控制着像素在屏幕上的最终颜色
 * attribute 存储限定符
-*** 从外部向定点着色器内传输数据, 只有定点着色器能使用
-*** 在定点着色器中声名attribute变量
+*** 从外部向顶点着色器内传输数据, 只有顶点着色器能使用
+*** 在顶点着色器中声名attribute变量
 **** attribute vec4 a_Position;
 *** 通过gl.getAttribLocation 获取变量
 **** 参数
-***** program  指定包含定点着色器和片元着色器的程序对象
+***** program  指定包含定点着色器和片元着色器function initArrayBuffer(gl, data, num, type, attribute) {
+  var buffer = gl.createBuffer();   // Create a buffer object
+  if (!buffer) {
+    console.log('Failed to create the buffer object');
+    return false;
+  }
+  // Write date into the buffer object
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+  // Assign the buffer object to the attribute variable
+  var a_attribute = gl.getAttribLocation(gl.program, attribute);
+  if (a_attribute < 0) {
+    console.log('Failed to get the storage location of ' + attribute);
+    return false;
+  }
+  gl.vertexAttribPointer(a_attribute, num, type, false, 0, 0);
+  // Enable the assignment of the buffer object to the attribute variable
+  gl.enableVertexAttribArray(a_attribute);
+
+  return true;
+}的程序对象
 ***** name     指定想要获取的attribute变量名
 *** 向attribute变量传输数据
 **** 通过gl.vertexAttrib1f/gl.vertexAttrib2f/gl.vertexAttrib3f/gl.vertexAttrib4f同族函数向attribute赋值
 **** 当我只赋值前3个参数时,第四个参数默认为1.0
 **** var position = new Float32Array([1.0,2.0,3.0]);
-**** gl.vertexAttrib3f(a_Position, position);
-
+**** gl.vertexAttrib3fv(a_Position, position);
 * uniform 存储限定符
 *** 从程序向顶点着色器和片元着色器传输不变数据
 *** 声名uniform变量
 **** uniform vec4 a_FragColor;
 *** 通过gl.getUniformLocation获取变量
 **** 参数
-***** progrBoxam  指定包含定点着色器和片元着色器的程序对象
+***** programBox  指定包含定点着色器和片元着色器的程序对象
 ***** name     指定想要获取的uniform变量名
 *** 向uniform变量传输数据
 **** gl.uniform1f/gl.uniform2f/gl.uniform3f/gl.uniform4f同族函数
@@ -91,6 +110,7 @@
 ***** offset       缓存区对象中的偏移量
 **** 开启attribute变量(gl.enableVertexAttribArray)
 * 绘制管线:给定视点,三维物体,光源,照明模式,纹理等元素,绘制一副二维图像
+** 渲染流程：由用户通过VBO将大量顶点数据传给GPU，在GPU中执行顶点着色器开始，完成
 ** 渲染管线:
 *** 顶点着色器:
 **** 执行顶点着色器,缓冲区对象第一个坐标(0.0,0.5)被传递给attribute变量a_position
@@ -98,17 +118,25 @@
 **** 再次执行顶点着色器,将剩余的顶点依次存储到图形装配区,进行装配图形
 *** 图元装配
 **** 将顶点着色器输出的所有顶点作为输入,将所有点装配成指定的图元的形状(三角形,点)
+**** 这里把所有顶点都绘制出来，没有进行裁剪操作
 **** 然后把装配的图形传给几何着色器
 *** 几何着色器
+**** 需要对超出屏幕外的三角形进行裁剪
+**** 想象一下，一个三角形其中一个顶点在画面外，这时我们看到的是一个四边形，这时需要把四边形切成两个小的三角形
 **** 将一系列顶点集合作为输入,通过产生新的顶点构造出新的图元来生成其他形状(三角形)
+**** 这个阶段还有背面剔除操作，减少绘制的顶点个数
+**** 这个阶段得到一堆在屏幕坐标上的三角片面，用于光栅化
 *** 光栅化阶段
 **** 把图元映射为最终屏幕上相应的像素,生成供片元着色器使用的片段
 **** 在片元着色器执行前会执行裁剪,裁剪丢弃你超出你试图以外的像素
+**** 包括：
+***** 遮挡面剔除：深度测试的过程
+***** 纹理操作：根据像素纹理坐标，获取对应纹理值
+***** 混色：根据目前已经画好的颜色，与正在计算的颜色的透明度，混合为两种颜色，作为新的颜色输出
+***** 滤镜：将正在计算的颜色通过滤镜后输出
 *** 片元着色器
 **** 计算像素最终颜色
-*** alpha测试和混合
-**** 这个阶段检测片段的对应的深度（和模板(Stencil)）值，用它们来判断这个像素是其它物体的前面还是后面，决定是否应该丢弃。
-**** 这个阶段也会检查alpha值（alpha值定义了一个物体的透明度）并对物体进行混合(Blend)。
+**** 通过该阶段后，像素的颜色值被写入帧缓存中
 ** 应用阶段:
 *** 碰撞检测,场景图建立,空间八叉树更新,视锥裁剪都在此阶段
 *** 该阶段末尾,几何数据(顶点坐标,法向量,纹理坐标,纹理等)通过数据总线传送到GPU
@@ -147,3 +175,13 @@
 *** 2.在CVV中进行图片裁剪
 *** 3.屏幕映射
 * 程序对象(program)
+* GPU VS CPU
+** GPU
+*** 具有高并行结构，所以GPU在处理图形数据和复杂算法方面拥有比CPU更高的效率
+*** GPU拥有大面积ALU（逻辑运算单元）用于数据处理，而非数据高速缓存和流控制，这样结构适合并行处理密集型数据
+*** 具有多个处理器核，在一个时刻可以进行多个数据处理
+*** 采用流式并行计算模式，对每个数据进行独立的并行计算，即流内任意元素的计算不依赖于其他同类型数据
+*** 并行计算：多个数据同时被使用，多个数据并行计算的时间和1个数据单独执行的时间是一样的
+** CPU
+*** CPU大面具为控制器和寄存器
+*** CPU执行计算任务时，一个时刻只能处理一个数据，而不存在并行处理

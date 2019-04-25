@@ -1,0 +1,107 @@
+
+* TODO UE
+** is over
+*** DONE service use https 
+*** DONE fix(scroll): has bug: click varina model to reproduce bug!
+*** DONE feat(sceneTree): when click current sceneTree node, scroll(y scroll) to it(make it bottom)
+*** DONE improve(sceneTree): need x rollbar
+*** DONE "Add Component" should click other place to close
+*** DONE feat: inspector->map: add select list
+*** DONE feat: add create sphere
+*** DONE fix(ui): fix color picker->sketch-picker->height should be 100%
+*** DONE asset->name: add "..."
+*** DONE feat(sceneTree): support drag to slibing
+**** DONE drag into scene first child
+*** DONE bind shortcut(not support edit)
+*** DONE fix: add gameObject should add to sceneTree node->children
+*** DONE change ui
+**** DONE run-stop height change to fixed value instead of percent? (@mickey)
+*** DONE support click sceneTree node to focus(refer to unity)(shortcut: f)
+*** DONE add "clone selected sceneTree node"
+**** DONE clone poin"data:image/png;base64 for img-canvas"
+t light, the grid plane affected by light
+**** DONE clone one gameObject, add into scene, should add into it's parent
+*** DONE feat(focus): should update distance by the current scene tree node->transform->scale and geometry->vertices
+*** DONE feat: add scroll bar(x, y) for sceneTree, inspector, bottom
+*** DONE test(ci): solve snapshot 
+*** DONE refactor: remove antd library
+*** DONE feat(pwa): add desktop icon
+*** DONE add about modal ui(edit "header->version")
+*** DONE add user info modal ui when user first enter editor
+*** DONE add upgrade info modal ui
+*** DONE use http2
+*** DONE antd message feature
+*** DONE feat: show and hide sceneTree, inspector, bottom
+*** DONE feat: data collection
+** doing
+** will done
+*** TODO feat: MeshRenderer inspector: add "isRender" checkbox
+*** TODO fix: change direction light to point light: when > 4 lights. 
+**** the select option should still be direction light(test snapshot)(with @mickey)
+*** TODO feat: export,import add waiting modal?
+*** TODO improve: texture inspector: show image(big size)
+*** TODO set format when import texture asset
+jpg rgb
+png: rgba
+
+*** TODO [#C] fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change
+*** TODO engine: imgui->slider: can't drag?
+*** TODO engine: firefox->arcball-> mouse scale not work
+*** TODO fix(engine): gameView-> arcball: when mouse wheel too close
+**** the camera will phi down!!!???(but scene view->arcball not has this bug!!!???)
+*** TODO fix(inspector): inspector->material: 1.create material2 asset;
+2.change it's color to red in asset inspector; 
+3.gameObject1 select material2(color is red); but the color is still not change(white?);
+only after:
+select other gameObject;
+select the gameObject1 back;
+
+the material color change to red!!!
+
+*** TODO fix(import package): 0.open debug; 1.dispose all gameObjects except one box; 2.export package wpk1; 3.dispose the box; 4.import wpk1;    error->"expect component alive, but actual not" 
+*** TODO fix(import package): 0.open debug; 1.dispose all boxs; 2.import package DemoPackage1_room.wpk;   error: "expect all wdb gameObjects->materials should be material assets or default materials, but actual not"
+*** TODO fix(asset): fix "drag asset to folder node": should fail instead of rename
+*** TODO feat(run): show debug info(use imgui to show)
+show time(render, loop), fps,memory, draw call count, face count, gameObject count ...
+
+*** TODO feat(publish): add more config
+**** TODO cache
+stream load/common load support wdb cache
+
+setting.json add cache field?
+"Scene201812300750"?
+
+**** TODO use stream load
+
+
+
+**** TODO debug
+open contract
+
+not compress
+
+show debug info:
+for no worker and worker
+
+*** TODO add free camera
+
+* TODO img-canvas
+**** DONE remove material should remove it's texture
+**** DONE set base64 should clear imageDataMap's blob and uint8
+**** DONE fix bug:remove texture should redraw material snapshot
+**** DONE fix bug
+     add one material;
+     load one texture;
+     drag texture to set material map;
+     remove texture;
+     undo;
+     click material;
+     the inspector canvas is white;
+**** DONE export wpk store material's snapshot to asb
+**** DONE import asb should create material image data node
+**** TODO export wpk store wdb's snapshot to asb
+**** TODO import asb should relation wdb snapshot
+* 1.1.2版本开发
+*** 本次开发export时把所有material的snapshot导出到asb中
+*** 在asb中存储material的snapshot对应在imageDataMap中的imgIndex
+*** import时读取获取到asb中的uint8Array，转化成blobURL字符串显示出来

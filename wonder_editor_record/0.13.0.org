@@ -29,19 +29,53 @@
     jpg rgb
     png: rgba
     
-** DONE deep dispose asset, use new array manage the assetId 
+**快捷键
+ DONE deep dispose asset, use new array manage the assetId 
 **** TODO remove asset material dispose from engine
-**** TODO remove asset texture dispose from texture
+**** TODO remove asset texture dispose= from texture
 **** TODO remove asset wdb model
 **** DONE use removedAssetIdArray's id
 **** DONE add test
 ** DONE apply material in renderGroup 
 **** TODO drag 
 **** TODO modal select material
-**** TODO default material (can't change)
+**** TODO default material 
+
+(can't change)
 ** DONE add material in asset
-** DONE can't drag asset node into the node which children has the same name node
-** DONE add change snapshot utils after yarn
+** DONE can't drag asset node into the node wbui throw errorldThreeLayerhttp://www.eTODOstr8-creative.io/product/ranks-recovery-seo-plan/
+Sfix gulp.task("updatePwaCacheVersion", funcetion (done) GameObjectComponentEngineService$WonderEditor.unsafeGetScrip {
+   disposeTree const packageJsonFilePath = path.join(__dirname, "p*** TODO我现在去研究下骑牛云 add user info modal ui when user first enter editor
+
+
+*** TODO add upgrade info modal ui
+
+
+*** TODO add about modal ui(edit "header->version")ackage.json");
+    const serviceWorkerFilePath = path.join(__dirname, "service-worker.js");
+
+    var packageremove material should remove it's textureJson = JSON.parse(fs.readFileSync(packageJsonFilePath, "utf8"));
+
+
+
+    var data = fs.readFileSync(serviceWorkerFilePath, "utf8");
+
+    var result = data.replace(/(var\scacheName\s=\s")(.+)"/img, function (match, p1, p2) {
+        return p1 + "wonder-editor-cache-" + packageJson.version + "\"";
+    });
+
+    fs.writeFileSync(
+        serviceWorkerFilePath, result, "utf8"
+    );
+
+    done();
+});bugs
+2.picking add isRootceneGr##2.22
+9.00-12.00 3h
+18.40-22.50aphToEnginehich
+**** TODO feat(pwa): add desktop icon child)ren has the same name node
+** DONE add change snapshot utils af
+TODO fix(scroll): has bug: click varina model to reproduce bug!ter yarn
 ** DONE import and export texture file
 ** DONE can export .wonderpackage format instead of .zip format?(@mickey)
 ** DONE fix: when stop, should update scenetree: (@mickey)
@@ -121,108 +155,5 @@ ma
 **** DONE need add Verification Code change password
 *** DONE user login
 **** DONE login should put name and password to server check
-* TODO UE
-** TODO improve UE
 
-*** TODO fix(engine): gameView-> arcball: when mouse wheel too close
-**** the camera will phi down!!!???(but scene view->arcball not has this bug!!!???)
-
-
-
-*** TODO fix(inspector): inspector->material: 1.create material2 asset;
-2.change it's color to red in asset inspector; 
-3.gameObject1 select material2(color is red); but the color is still not change(white?);
-only after:
-select other gameObject;
-select the gameObject1 back;
-
-the material color change to red!!!
-
-
-
-*** TODO fix(import package): 0.open debug; 1.dispose all gameObjects except one box; 2.export package wpk1; 3.dispose the box; 4.import wpk1;    error->"expect component alive, but actual not" 
-
-
-*** TODO fix(import package): 0.open debug; 1.dispose all boxs; 2.import package DemoPackage1_room.wpk;   error: "expect all wdb gameObjects->materials should be material assets or default materials, but actual not"
-
-
-
-*** TODO fix(asset): fix "drag asset to folder node": should fail instead of rename
-
-
-*** TODO feat(run): show debug info(use imgui to show)
-show time(render, loop), fps,memory, draw call count, face count, gameObject count ...
-
-*** TODO feat(publish): add more config
-**** TODO cache
-stream load/common load support wdb cache
-
-setting.json add cache field?
-"Scene201812300750"?
-
-**** TODO use stream load
-
-
-
-**** TODO debug
-open contract
-
-not compress
-
-show debug info:
-for no worker and worker
-
-
-
-
-
-
-*** TODO add free camera
-*** TODO support click sceneTree node to focus(refer to unity)(shortcut: f)
-*** DONE "Add Component" should click other place to close
-
-*** TODO add "clone selected sceneTree node"
-**** TODO clone point light, the grid plane affected by light
-**** DONE clone one gameObject, add into scene, should add into it's parent
-
-*** DONE feat: inspector->map: add select list
-*** DONE feat: add create sphere
-*** DONE fix(ui): fix color picker->sketch-picker->height should be 100%
-
-
-*** TODO bind shortcut(not support edit)
-*** TODO feat(sceneTree): support drag to slibing
-
-*** TODO fix: change direction light to point light: when > 4 lights. the select option should still be direction light(test snapshot)(with @mickey)
-*** TODO feat: MeshRenderer inspector: add "isRender" checkbox
-
-
-*** TODO feat: export,import add waiting modal?
-
-*** TODO improve: texture inspector: show image(big size)
-*** TODO fix: add gameObject should add to sceneTree node->children
-
-*** TODO refactor: remove antd library
-
-*** TODO set format when import texture asset
-jpg rgb
-png: rgba
-
-*** DONE asset->name: add "..."
-
-*** TODO change ui
-**** TODO run-stop height change to fixed value instead of percent? (@mickey)
-
-*** TODO [#C] fix "load asset wdb"->inspector order: arcball component, cameraGroup order has change
-
-*** TODO engine: imgui->slider: can't drag?
-
-
-*** TODO engine: firefox->arcball-> mouse scale not work
-
-
-
-
-
-
-
+    
