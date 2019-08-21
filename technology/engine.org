@@ -15,3 +15,50 @@
 ***** 比如添加material组件添加color, 需要添加color矩阵, 以及对应的glsl, 着色器
 ***** 根据组件来动态添加glsl片段, 组成完整的着色器片段, 进行渲染
 ***** 这样我们就可以在每次update阶段进行数据更新, 然后进行render
+* DO架构
+**** 一开始根据setting配置文件预先分配内存，比如配置1W个GameObject，就预先给GameObject中每个组件分配好内存
+**** 把内存根据组件分为多个大块，每块中预先准备一万个GameObject的组件默认情况
+**** 比如GameObject中MeshRenderer组件，在Load setting之后，分配好一万份默认drawMode=triangle的组件
+**** 每个组件都有一个GameObjectMap SparseMap用于关联组件和GameObject
+**** 在GameObjectRecord中又存在每个组件的SparseMap, 可以直接获取到组件
+**** GameObject和组件都只是一个int类型，GameObject用于存储有哪些组件，组件用于根据Offset管理内存，获取到具体属性
+* 疑问
+*** mark dirty
+**** camera 和 transform在update的时候都是更新的dirty数据，这个mark dirty操作在哪里进行的？
+***** 在set localPosition/rotation/scale 时候进行markDirty操作， 然后开始循环时更新数据
+**** 为什么loop_pipeline在刚开始就update各种组件，难道是上一帧中的dirty数据，延迟到这一帧更新
+***** 设置transform值的操作确实没有马上更新，而是等到下一帧开始进行更新
+**** update camera job
+***** camera perspective （pMatrix）只会在resize时更新一次，因为canvas大小改变，所以需要调整一次
+***** 如果有arcballCameraController，则每帧更新所有的arcball camera 的transform
+**** get camera data job
+***** camera view Matrix 在render前会根据camera transform进行计算
+*** event 
+**** 如何绑定的arcball camera controller 事件？
+***** 在run之后由编辑器手动bind事件，切换camera时unbind事件
+*** program
+**** 是不是每个GameObject都有一个program，每个program中都有自己的shader
+**** 绘制时不同GameObject使用不同program然后进行绘制
+*** create basic render object buffer
+**** 将所有basic GameObject的渲染组件(transform, material, geometry,meshRenderer)存储到一个uint32 array buffer中
+**** 然后在render_basic 时使用这些数据进行渲染
+*** render
+**** 为什么需要render2次
+***** 因为有scene-view and game-view
+**** render_basic
+***** 遍历render GameObject array获取每个GameObject的basic render buffer
+***** 根据material获取属性不同获取到不同的shader
+***** 根据每个shader创建一个program并使用
+***** 设置attribLocation值，设置顶点数据，包括position和color
+***** 设置uniform值，包括light以及mvpMatrix
+***** 最后进行draw操作，每个GameObject draw一次
+*** glsl
+**** glsl 基本片段是在createEngineState（createStateMainService）中初始化创建的,  glslChunkRecord: ShaderChunkSystem.create()
+**** 在init_pipelines中preGetGlslDataJob中确定了precision精确度
+**** 在init_pipelines中initBasicMaterial中确地了basic material使用的通用shader
+* WDB file
+*** generate glb: 把整个scene GameObject生成出一个glb(gltf) json 字符串
+*** generate wdb: 把生成出的gltf字符串转成record，然后转成wdb(WDType.wd)
+*** assemble wdb: 读取wdb file然后生成出一个root GameObject
+*** convert gltf json to record: 将gltf json 字符串转成 gltfType类型
+*** 用户上传的文件一般是gltf或者glb，然后将gltf转成glb，最后将glb转成wdb操作

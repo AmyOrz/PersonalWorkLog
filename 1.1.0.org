@@ -1,5 +1,4 @@
-
-* TODO UE
+* DONE UE
 ** is over
 *** DONE service use https 
 *** DONE fix(scroll): has bug: click varina model to reproduce bug!
@@ -19,15 +18,16 @@
 *** DONE support click sceneTree node to focus(refer to unity)(shortcut: f)
 *** DONE add "clone selected sceneTree node"
 **** DONE clone poin"data:image/png;base64 for img-canvas"
-t light, the grid plane affected by light
 **** DONE clone one gameObject, add into scene, should add into it's parent
 *** DONE feat(focus): should update distance by the current scene tree node->transform->scale and geometry->vertices
 *** DONE feat: add scroll bar(x, y) for sceneTree, inspector, bottom
 *** DONE test(ci): solve snapshot 
 *** DONE refactor: remove antd library
-*** DONE feat(pwa): add desktop icon
-*** DONE add about modal ui(edit "header->version")
-*** DONE add user info modal ui when user first enter editor
+*** DONE arcballChandleWhenLoadingFuinitHotKeysForEdiunsafeGetDirectionArraytorJobncameraControllerF                  
+*** DONE add about modal ui(edi￼Wonder-TWEB内容管理平台echnology
+Wonder-HostPlatform
+Detailst "header->version")
+*** DONE add user5. info modal ui when u••••••••••••••••ser first enter editor
 *** DONE add upgrade info modal ui
 *** DONE use http2
 *** DONE antd message feature
@@ -85,7 +85,7 @@ for no worker and worker
 
 *** TODO add free camera
 
-* TODO img-canvas
+* DONE img-canvas
 **** DONE remove material should remove it's texture
 **** DONE set base64 should clear imageDataMap's blob and uint8
 **** DONE fix bug:remove texture should redraw material snapshot
@@ -99,9 +99,65 @@ for no worker and worker
      the inspector canvas is white;
 **** DONE export wpk store material's snapshot to asb
 **** DONE import asb should create material image data node
-**** TODO export wpk store wdb's snapshot to asb
-**** TODO import asb should relation wdb snapshot
+**** DONE export wpk store wdb's snapshot to asb
+**** DONE import asb should relation wdb snapshot
+* TODO UI
+*** TODO fix bug:drag asset file to folder, the border not change
+*** DONE script ui
+*** DONE asset chidlren node name should show
 * 1.1.2版本开发
 *** 本次开发export时把所有material的snapshot导出到asb中
 *** 在asb中存储material的snapshot对应在imageDataMap中的imgIndex
 *** import时读取获取到asb中的uint8Array，转化成blobURL字符串显示出来
+* 1.1.3 fly camera
+*** DONE code check
+**** DONE add getAllFlyCamera -> test
+**** DONE add redo undo fly
+**** DONE add add/remove fly component tests
+**** DONE refactor: remove focus->arcball logic and test
+*** TODO support mobile
+**** TODO do nothing in mobile
+*** DONE euler angle translation
+*** DONE update Wonder-Editor -> publish -> wonder.js, execute publish 
+*** DONE assemble wdb store fly camera data to wdb file
+**** DONE assemble wdb 
+**** DONE generate wdb 
+**** DONE convert wdb
+*** DONE key down two key at the same time
+*** DONE redo/undo operate fly camera data
+*** DONE 多线程下fly camera操作
+*** 问题
+**** fly camera写入wdb需要写哪些测试？
+**** 如何下载一个新的含有fly camera的wdb走运行测试
+* 1.1.4 arcball caemra use direction
+*** DONE use direction in wonderjs
+* 1.1.5 editor管理用户wpk文件
+*** TODO 如何异步保存用户wpk文件
+**** 10s间隔自动保存一次
+*** TODO fix editor ui
+* feature
+*** TODO [#A] camera, point light gizmo:B
+*** TODO [#A] 托管平台: 3B
+*** DONE [#A] arcball camera use direction : S
+*** TODO [#A] editor(add isRender and isActive):S
+
+support set isRender
+
+support set gameObject->isActive
+
+support set script->isActive
+*** TODO [#A] split view:S
+*** TODO [#B] enhance selection:B
+multiple selection
+selection by mouse left button in scene view
+*** TODO [#B] 第一人称相机： S
+*** TODO [#B] debug info:M
+*** TODO [#B] 开通用户注册 : S
+*** TODO [#B] 开通微信支付和支付宝支付 : B
+*** TODO [#B] support custom job pipeline: B
+*** TODO [#B] publish to weixin : B
+*** TODO [#C] support sound : B
+*** TODO [#C] support run in new tab : M
+*** DONE [#A] fly camera engine and editor: M
+*** DONE [#A] euler angle transform: M(not do)
+*** DONE [#A] arcball camera use direction : S
